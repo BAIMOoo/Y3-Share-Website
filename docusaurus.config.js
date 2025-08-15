@@ -51,7 +51,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://gitee.com/baim00/Y3-Share-Website/tree/master/',
         },
         blog: {
           showReadingTime: true,
@@ -63,7 +63,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://gitee.com/baim00/Y3-Share-Website/tree/master/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -92,8 +92,9 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: '教程',
+            label: '文档',
           },
+          {to: 'http://60.205.162.211:9888/', label: 'Y3QA', position: 'left'},
           {to: '/blog', label: '博客', position: 'left'},
           {
             href: 'https://github.com/BAIMOoo',
@@ -106,25 +107,16 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: '文档',
-            items: [
-              {
-                label: '教程',
-                to: '/docs/简介',
-              },
-            ],
-          },
-          {
             title: '社区',
             items: [
               {
                 label: '官方交流QQ群',
                 href: 'https://qm.qq.com/q/iA1rFlny2A',
               },
-              // {
-              //   label: 'Discord',
-              //   href: 'https://discordapp.com/invite/docusaurus',
-              // },
+              {
+                label: 'Y3QA社区',
+                href: 'http://60.205.162.211:9888/',
+              },
               // {
               //   label: 'X',
               //   href: 'https://x.com/docusaurus',
