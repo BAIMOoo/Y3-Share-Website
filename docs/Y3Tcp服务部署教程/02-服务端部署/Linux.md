@@ -32,6 +32,20 @@ ls
 
 # 进入项目文件夹
 cd y3-tcp-server
+
+# 修改服务端配置文件(可选)
+主要是修改数据库的用户名、密码、端口
+vi docker-compose.yml
+
+以下是通常可能修改的地方：
+ports:
+  - "27017:27017"
+environment:
+  MONGO_INITDB_ROOT_USERNAME: admin
+  MONGO_INITDB_ROOT_PASSWORD: password123
+
+- MONGODB_URI=mongodb://admin:password123@mongodb:27017/
+请自行确保配置文件修改正确
 ```
 
 

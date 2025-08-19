@@ -1,6 +1,6 @@
 ---
 title: 05-ECA接口
-showLastUpdateAuthor:: true
+showLastUpdateAuthor: true
 sidebar_position: 5
 ---
 # 05-ECA接口

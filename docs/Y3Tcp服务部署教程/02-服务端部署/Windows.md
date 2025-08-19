@@ -18,10 +18,24 @@ docker下载地址: [Docker Desktop: The #1 Containerization Tool for Developers
     ![img](../img/下载服务端项目压缩包.png)
    
    方法2：在cmd终端中执行命令git clone https://gitee.com/baim00/y3-tcp-server.git
-### 4. 打开项目文件夹
+
+### 4. 修改服务端配置文件docker-compose.yml(可选)
+主要是修改数据库的用户名、密码、端口
+以下是通常可能修改的地方：
+```
+ports:
+  - "27017:27017"
+environment:
+  MONGO_INITDB_ROOT_USERNAME: admin
+  MONGO_INITDB_ROOT_PASSWORD: password123
+
+- MONGODB_URI=mongodb://admin:password123@mongodb:27017/
+请自行确保配置文件修改正确
+```
+### 5. 打开项目文件夹
 ![img](../img/服务端项目文件夹.png)
-### 5. 在空白处同时按下shift+鼠标右键，在下拉列表中选择“在此处打开Powershell窗口”
-### 6. 构建和部署服务端
+### 6. 在空白处同时按下shift+鼠标右键，在下拉列表中选择“在此处打开Powershell窗口”
+### 7. 构建和部署服务端
 ```
 # 构建并启动服务（后台运行）
 
