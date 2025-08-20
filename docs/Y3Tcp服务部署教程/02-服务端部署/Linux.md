@@ -93,7 +93,7 @@ docker-compose start
 # 重启服务
 docker-compose restart
 
-#当服务端代码有更新，该如何操作？
+#当服务端代码有更新，该如何操作？(下面的命令需要在服务端文件夹下执行)
 1. docker-compose down
 2. 更新代码
 3. docker-compose up --build -d
