@@ -30,6 +30,7 @@ environment:
   MONGO_INITDB_ROOT_PASSWORD: password123
 
 - MONGODB_URI=mongodb://admin:password123@mongodb:27017/
+- DB_NAME=TESTDB  #数据库名称
 请自行确保配置文件修改正确
 ```
 ### 5. 打开项目文件夹
@@ -45,6 +46,11 @@ docker-compose up --build -d
 docker-compose ps
 
 # 如果执行第一步时报错可以参照这个文档解决：https://cloud.tencent.com/developer/article/2516747
+
+#当服务端代码需要更新，该如何操作？(下面的命令需要在服务端文件夹下执行)
+1. docker-compose down
+2. 更新代码
+3. docker-compose up --build -d
 ```
 执行完命令后，窗口输出应该如下图，此时服务器已经成功部署
 ![img](../img/windows成功部署.png)
