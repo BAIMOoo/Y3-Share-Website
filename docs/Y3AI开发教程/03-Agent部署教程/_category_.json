@@ -3,6 +3,6 @@
   "position": 0,
   "link": {
     "type": "generated-index",
-    "description": "如果你是萌新小白，对于繁杂的配置过程、使用终端等方面感到非常有压力，可以优先尝试选择使用VSCode插件的方案"
+    "description": "如果你是萌新小白，对于繁杂的配置过程、使用终端等方面感到非常有压力，可以优先尝试选择使用VSCode插件的方案; 如果你希望在windows终端环境下使用agent，强烈建议配合wsl使用"
   }
 }

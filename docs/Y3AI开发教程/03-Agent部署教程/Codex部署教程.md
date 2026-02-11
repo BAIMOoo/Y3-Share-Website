@@ -6,6 +6,7 @@ sidebar_position: 0
 
 本文主要介绍在如何windows下使用VSCode Codex扩展，如果你希望在终端中使用Codex, 暂时请自行查阅网络资料
 
+
 ## 系统要求
 Windows 10 或 Windows 11
 
