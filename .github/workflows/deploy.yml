@@ -30,6 +30,31 @@ jobs:
       - name: Build site
         run: npm run build
 
+      - name: Validate deploy path
+        env:
+          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+        run: |
+          if [ -z "$DEPLOY_PATH" ]; then
+            echo "DEPLOY_PATH is empty."
+            exit 1
+          fi
+
+          NORMALIZED_PATH="${DEPLOY_PATH%/}"
+
+          # Prevent accidental overwrite of the repository root.
+          if [ "$NORMALIZED_PATH" = "/root/Y3-Share-Website" ]; then
+            echo "Unsafe DEPLOY_PATH: $DEPLOY_PATH"
+            echo "Use the build directory path, e.g. /root/Y3-Share-Website/build/"
+            exit 1
+          fi
+
+          # In this repo's serve-from-build mode, deploy target must be a build directory.
+          if [[ "$NORMALIZED_PATH" != */build ]]; then
+            echo "Unsafe DEPLOY_PATH: $DEPLOY_PATH"
+            echo "DEPLOY_PATH must end with /build or /build/."
+            exit 1
+          fi
+
       - name: Start SSH agent
         uses: webfactory/ssh-agent@v0.9.0
         with:
