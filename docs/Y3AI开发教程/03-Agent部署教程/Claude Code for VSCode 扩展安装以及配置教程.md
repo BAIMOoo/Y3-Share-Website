@@ -18,7 +18,8 @@ sidebar_position: 0
 
 ### 环境需求
 推荐环境：windows10/windows11
-不推荐win10，Claude Code CLI 在win11下的表现显著优于win10，除非你愿意自己折腾，下面的文档均是在win11环境下操作的
+
+如果你是win10系统，强烈建议优先选择Claude Code for VSCode，配置简单，兼容性好
 
 
 
@@ -69,7 +70,7 @@ claude
 # 执行完成后，关闭终端即可
 ```
 
-**配置文件1位置：%USERPROFILE%\.claude\settings.json**
+**配置文件1位置：%USERPROFILE%\\.claude\settings.json**
 
 1. 按 Win + R，输入 %USERPROFILE% 回车，打开用户目录
 2. 打开 .claude 文件夹（注意开头有个点，如果没有就新建一个空文件夹）
@@ -85,7 +86,7 @@ claude
 }
 ```
 
-**配置文件2位置：%USERPROFILE%\.claude.json**
+**配置文件2位置：%USERPROFILE%\\.claude.json**
 
 1. 按 Win + R，输入 %USERPROFILE% 回车，打开用户目录
 2. 用记事本打开 .claude.json 文件（注意开头有个点）
