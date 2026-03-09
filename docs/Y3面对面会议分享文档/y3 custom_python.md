@@ -180,3 +180,70 @@ def get_ui_anchors_y(comp_name):
 global_api.get_ui_anchors_x = get_ui_anchors_x
 global_api.get_ui_anchors_y = get_ui_anchors_y
 ```
+
+## 动态创建指定命名的空画布
+```
+# 导入UI相关模块（用于创建空画布）
+from clients.ui.uiEditor.EditorUICompMeta import UIComponentType
+from clients.ui.uiEditor.UIProxy.UIProxyNodeFactory import ProxyNodeType, create_proxy_node
+
+# 创建空画布
+def create_empty_layer(role, layer_name, zorder=400, visible=True):
+    """
+    凭空创建一个指定名称的空画布
+
+    Args:
+        role: 玩家角色
+        layer_name: 画布名称
+        zorder: 层级顺序，默认400
+        visible: 是否可见，默认True
+
+    Returns:
+        str: 创建的画布的uid，如果创建失败返回None
+    """
+    if role is None or UIComponentType is None:
+        return None
+
+    ui_mgr = G.ui_editor_mgr
+    if ui_mgr:
+        if (hasattr(G.black_box, 'game_api') and
+            hasattr(G.black_box.game_api, 'role_ui_tree')):
+            proxy_root = G.black_box.game_api.role_ui_tree.get(role.role_id)
+            if proxy_root:
+                for child in proxy_root.child_list:
+                    if hasattr(child, 'name') and child.name == layer_name:
+                        return child.uid
+
+        # 创建最小化的画布数据
+        layer_data = {
+            'name': layer_name,
+            'visible': visible,
+            'zorder': zorder,
+            'type': UIComponentType.Layer,
+            'children': []
+        }
+
+        # 创建画布
+        layer = ui_mgr.create_layer(layer_data)
+        if layer:
+            complete_layer_data = layer.save()
+
+            if hasattr(ui_mgr, 'raw_layer_data'):
+                ui_mgr.raw_layer_data[layer.uid] = complete_layer_data
+
+            # 同步到代理树（多人游戏场景）
+            if (create_proxy_node is not None and
+                hasattr(G.black_box, 'game_api') and
+                hasattr(G.black_box.game_api, 'role_ui_tree')):
+                proxy_root = G.black_box.game_api.role_ui_tree.get(role.role_id)
+                if proxy_root:
+                    # 检查是否已存在
+                    if not proxy_root.get_node(layer.uid):
+                        create_proxy_node(proxy_root, ProxyNodeType.NORMAL, complete_layer_data, role.role_id)
+
+            return layer.uid
+
+    return None
+
+global_api.create_empty_layer = create_empty_layer
+```
