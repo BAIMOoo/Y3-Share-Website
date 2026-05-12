@@ -3,6 +3,8 @@ title: UI同步讲解
 showLastUpdateAuthor: true
 sidebar_position: 2
 ---
+# UI同步讲解
+
 建议先阅读官方文档[多人联机同步机制-开发者学院-Y3编辑器官网](https://163.com/learn/project/d/15?Aid=24)
 
 讲解直播视频： https://163.com/learn/project/d/31?Aid=72

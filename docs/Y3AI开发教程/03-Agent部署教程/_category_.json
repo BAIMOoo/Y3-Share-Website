@@ -3,6 +3,6 @@
   "position": 0,
   "link": {
     "type": "generated-index",
-    "description": "如果你是萌新小白，对于繁杂的配置过程、使用终端等方面感到非常有压力，可以优先尝试选择使用VSCode插件的方案; \n如果你希望在windows终端环境下使用agent，强烈建议配合wsl使用"
+    "description": "这里整理 Claude Code、Codex 等 Agent 的安装与配置教程。终端 Agent 建议先在 Windows 原生终端和 WSL 两条分支中选一条，再按对应步骤安装。"
   }
 }

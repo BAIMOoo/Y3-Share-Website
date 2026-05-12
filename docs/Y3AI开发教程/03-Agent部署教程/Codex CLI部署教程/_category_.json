@@ -1,0 +1,8 @@
+{
+  "label": "Codex CLI部署教程",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "先选择 Windows 原生终端或 WSL 分支，再按对应步骤安装 Codex CLI，最后完成模型配置并启动验证。"
+  }
+}

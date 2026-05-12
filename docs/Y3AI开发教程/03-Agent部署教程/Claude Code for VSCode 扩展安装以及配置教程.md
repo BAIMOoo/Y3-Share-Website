@@ -3,13 +3,20 @@ title: Claude Code for VSCode 扩展安装以及配置教程
 showLastUpdateAuthor: true
 sidebar_position: 0
 ---
+# Claude Code for VSCode 扩展安装以及配置教程
+
+:::tip 验证与时效说明
+AI 工具、模型名称、安装步骤和第三方服务变化很快。本文保留实践经验，但涉及时效性的内容，生产使用前请结合官方文档和来源记录再确认。
+:::
+
+
 ## Claude Code for VSCode 简介
 
 可以直接在您的VSCode中快速使用Claude的强大能力，更容易上手的操作界面，支持子代理、自定义斜杠命令和 MCP（这些功能在 VS Code 扩展中可用，但某些功能只能通过命令行界面配置）
 
 相较于Claude Code CLI，Claude Code for VSCode配置更简单，界面更新手友好
 
-**如果你是萌新小白，对于繁杂的配置过程、使用终端等方面感到非常有压力，可以优先尝试使用Claude Code for VSCode**
+<strong>如果你是萌新小白，对于繁杂的配置过程、使用终端等方面感到非常有压力，可以优先尝试使用Claude Code for VSCode</strong>
 
 配置完成后，只需要在VSCode编辑器右上角点击Claude图标即可快速使用，非常方便
 
@@ -70,7 +77,7 @@ claude
 # 执行完成后，关闭终端即可
 ```
 
-**配置文件1位置：%USERPROFILE%\\.claude\settings.json**
+<strong>配置文件1位置：%USERPROFILE%\\.claude\settings.json</strong>
 
 1. 按 Win + R，输入 %USERPROFILE% 回车，打开用户目录
 2. 打开 .claude 文件夹（注意开头有个点，如果没有就新建一个空文件夹）
@@ -86,7 +93,7 @@ claude
 }
 ```
 
-**配置文件2位置：%USERPROFILE%\\.claude.json**
+<strong>配置文件2位置：%USERPROFILE%\\.claude.json</strong>
 
 1. 按 Win + R，输入 %USERPROFILE% 回车，打开用户目录
 2. 用记事本打开 .claude.json 文件（注意开头有个点）
@@ -105,27 +112,9 @@ claude
 
 ### 五、VSCode下载&安装
 
-1. **下载安装包（如果你已经安装了，可以在vscode左上角菜单-帮助-检查更新中查看是否为最新版本，非最新版本可能导致后续y3扩展安装失败）**
+VS Code 安装、Y3 开发助手扩展安装以及相关截图，已经整理到 [如何使用 AI 开发 Y3 项目](../04-如何使用AI开发Y3项目.md) 中。
 
-​	vscode官网：https://code.visualstudio.com/
-
-![img](../Y3_AI_images/image3.png)
-
-2. **安装（一直下一步，直到出现下面的页面，按照下图勾选配置）**
-
-![img](../Y3_AI_images/image4.png)
-
-3. 安装汉化、y3开发助手、Claude Code for VSCode扩展
-
-在搜索框分别搜索“chinese”、“y3开发助手”、“Claude”，点击安装
-
-![img](../Y3_AI_images/image5.png)
-
-![img](../Y3_AI_images/image6.png)
-
-![img](../Y3_AI_images/image7.png)
-
-![img](../Y3_AI_images/image25.png)
+如果你还没有安装 VS Code，请先阅读那篇文档中的“准备 VS Code 和 Y3 开发助手”部分；安装好 VS Code 后，再回到当前文档继续安装 Claude Code for VSCode 扩展。
 
 ---
 

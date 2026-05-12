@@ -3,6 +3,8 @@ title: 小窗挂机UI实现分享
 showLastUpdateAuthor: true
 sidebar_position: 1
 ---
+# 小窗挂机UI实现分享
+
 ![img](./img/小窗挂机例子.png)
 思路：
 1. 先确定我们希望缩小后的窗口尺寸

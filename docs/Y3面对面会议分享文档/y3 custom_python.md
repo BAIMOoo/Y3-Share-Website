@@ -2,6 +2,7 @@
 title: y3 custom_python汇总
 showLastUpdateAuthor: true
 ---
+# y3 custom_python汇总
 
 ## 如何使用
 在关卡下的custom_eca/custom_python.py中可以自定义py的函数加载

@@ -1,8 +1,13 @@
 ---
 title: Linux部署教程
-showLastUpdateAuthor:: true
+showLastUpdateAuthor: true
 ---
 # Linux部署教程
+
+:::warning 部署与安全说明
+服务端工具、数据库、Docker Compose 和 Nakama 可能随版本变化。示例端口、默认用户、密码和公网 IP 仅适合学习或测试；生产环境请使用强密码、最小化暴露端口，并以当前官方文档为准。
+:::
+
 ## 演示平台: Linux (Ubuntu 22.04 64位 UEFI版)
 ### 1. 安装Docker和Docker Compose
 ```
@@ -14,7 +19,7 @@ sudo apt update
 sudo apt install docker.io
 
 # 安装Docker Compose(执行命令后会提示是否继续，输入Y然后回车即可)
-sudo apt install docker-compose
+sudo apt install docker.io docker-compose-plugin
 
 # 启动Docker服务
 sudo systemctl start docker
@@ -22,7 +27,7 @@ sudo systemctl enable docker
 ```
 
 
-### 2. **克隆服务端文件**
+### 2. <strong>克隆服务端文件</strong>
 ```
 # 克隆项目
 git clone https://gitee.com/baim00/y3-tcp-server.git
@@ -50,14 +55,14 @@ environment:
 ```
 
 
-### 3. **构建和启动服务**
+### 3. <strong>构建和启动服务</strong>
 ```
-# 注意docker-compose命令都需要在项目路径下执行
+# 注意docker compose命令都需要在项目路径下执行
 # 构建并启动服务（后台运行）
-docker-compose up --build -d
+docker compose up --build -d
 
 # 查看服务状态
-docker-compose ps
+docker compose ps
 
 # 如果执行第一步时报错可以参照这个文档解决：https://cloud.tencent.com/developer/article/2516747
 sudo vi /etc/docker/daemon.json
@@ -73,33 +78,32 @@ sudo vi /etc/docker/daemon.json
 ```
 
 
-### 4. **验证部署**
+### 4. <strong>验证部署</strong>
 ```
 检查服务是否正常运行：
 # 查看服务器日志
-docker-compose logs server
+docker compose logs server
 ```
 如果看到类似以下输出，说明服务端已经正常部署了
 ![img](../img/成功部署输出.png)
 
 
-### 5. **管理服务**
+### 5. <strong>管理服务</strong>
 ```
 # 停止服务
-docker-compose stop
+docker compose stop
 
 # 启动服务
-docker-compose start
+docker compose start
 
 # 重启服务
-docker-compose restart
+docker compose restart
 
 #当服务端代码需要更新，该如何操作？(下面的命令需要在服务端文件夹下执行)
-1. docker-compose down
+1. docker compose down
 2. 更新代码
-3. docker-compose up --build -d
+3. docker compose up --build -d
 ```
 TIPS:如果你使用的是云服务厂商的服务器，还需要在云服务厂商的后台页面设置安全组，确保所有玩家都能访问我们的服务器。
 下图为阿里云的控制台页面
 ![img](../img/阿里云安全组页面.png)
-

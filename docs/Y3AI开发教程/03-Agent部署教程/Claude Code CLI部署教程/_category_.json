@@ -1,0 +1,8 @@
+{
+  "label": "Claude Code CLI部署教程",
+  "position": 0,
+  "link": {
+    "type": "generated-index",
+    "description": "Claude Code CLI 是运行在终端里的 Agent。它适合直接在项目目录中读代码、改代码、运行命令、查看报错并继续修正。"
+  }
+}

@@ -1,8 +1,13 @@
 ---
 title: Windows部署教程
-showLastUpdateAuthor:: true
+showLastUpdateAuthor: true
 ---
 # Windows部署教程
+
+:::warning 部署与安全说明
+服务端工具、数据库、Docker Compose 和 Nakama 可能随版本变化。示例端口、默认用户、密码和公网 IP 仅适合学习或测试；生产环境请使用强密码、最小化暴露端口，并以当前官方文档为准。
+:::
+
 ## 演示平台: Windows 11 24H2
 ### 1. 根据自己的电脑架构确定下载哪个docker客户端
 如何确认自己电脑的架构: [如何查看自己电脑的架构是 ARM 还是 AMD？ - AlphaGeek - 博客园](https://www.cnblogs.com/geekbruce/articles/18554682)
@@ -40,17 +45,17 @@ environment:
 ```
 # 构建并启动服务（后台运行）
 
-docker-compose up --build -d
+docker compose up --build -d
 
 # 查看服务状态
-docker-compose ps
+docker compose ps
 
 # 如果执行第一步时报错可以参照这个文档解决：https://cloud.tencent.com/developer/article/2516747
 
 #当服务端代码需要更新，该如何操作？(下面的命令需要在服务端文件夹下执行)
-1. docker-compose down
+1. docker compose down
 2. 更新代码
-3. docker-compose up --build -d
+3. docker compose up --build -d
 ```
 执行完命令后，窗口输出应该如下图，此时服务器已经成功部署
 ![img](../img/windows成功部署.png)
