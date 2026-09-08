@@ -7,7 +7,7 @@ sidebar_position: 3
 
 ## 一、目标
 
-将原先“本地 push -> 服务器 pull -> 手动 build”的流程，改为“本地 push -> GitHub Actions 自动 build 并自动部署”，减少人工操作和发布错误。
+采用“提交代码 -> 推送版本标签 -> GitHub Actions 自动 build 并自动部署”的流程。日常推送分支不会部署，准备上线时再发布版本标签。
 
 ## 二、实现原理
 
@@ -17,7 +17,7 @@ sidebar_position: 3
 
 核心原理如下：
 
-1. 监听 `master` 分支的 `push` 事件。
+1. 监听以 `v` 开头的标签的 `push` 事件，例如 `v1.0.0`。
 2. 在 GitHub Runner 中执行 `npm ci` 和 `npm run build`，生成静态文件 `build/`。
 3. 使用 SSH 私钥连接服务器。
 4. 使用 `rsync --delete` 将 `build/` 同步到服务器 `DEPLOY_PATH`。
@@ -27,8 +27,10 @@ sidebar_position: 3
 
 ### 1）触发阶段
 
-- 触发条件：`master` 分支有新提交。
-- 手动触发：Actions 页面点击 `Run workflow`。
+- 触发条件：推送以 `v` 开头的标签，例如 `v1.0.0`。
+- 推送 `master` 或其他分支不会触发部署，也不提供 `Run workflow` 手动入口。
+- 构建的是标签指向的提交。标签匹配规则不限制所属分支，发布时应在更新后的 `master` 上创建标签。
+- 所有版本共用部署并发组，正在执行的部署不会被新版本取消；GitHub 最多保留一个待运行任务，后来的任务可能替换等待中的任务。
 
 ### 2）构建阶段
 
@@ -67,10 +69,19 @@ sidebar_position: 3
 
 ## 五、日常发布流程
 
-1. 本地写文档并提交代码。
-2. 执行 `git push origin master`。
-3. 打开 GitHub Actions 查看 `Deploy Docusaurus` 运行状态。
-4. 运行成功后，服务器 `build/` 内容自动更新。
+1. 将本次修改提交到 `master`，并执行 `git push origin master`。这一步不会部署。
+2. 确认当前位于 `master`，执行 `git pull --ff-only origin master`，确保发布的是更新后的主干。
+3. 创建新的版本标签并单独推送，例如：
+
+   ```bash
+   git tag -a v1.0.0 -m "Release v1.0.0"
+   git push origin v1.0.0
+   ```
+
+4. 打开 GitHub Actions 查看 `Deploy Docusaurus` 运行状态。
+5. 运行成功后，服务器 `build/` 内容自动更新。
+
+每次发布使用新的版本号，不要移动或覆盖已发布的标签。标签指向的提交必须包含这份标签触发工作流。失败后可在 Actions 页面重新运行对应任务。
 
 ## 六、常见问题
 

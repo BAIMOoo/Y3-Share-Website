@@ -2,13 +2,12 @@ name: Deploy Docusaurus
 
 on:
   push:
-    branches:
-      - master
-  workflow_dispatch:
+    tags:
+      - 'v*'
 
 concurrency:
-  group: deploy-${{ github.ref }}
-  cancel-in-progress: true
+  group: deploy-production
+  cancel-in-progress: false
 
 jobs:
   deploy:
