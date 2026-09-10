@@ -29,6 +29,9 @@ jobs:
       - name: Build site
         run: npm run build
 
+      - name: Check document URLs and legacy redirects
+        run: npm run check:doc-urls
+
       - name: Validate deploy path
         env:
           DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}

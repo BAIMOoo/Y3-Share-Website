@@ -1,4 +1,5 @@
 ---
+slug: /y3qa
 title: 关于Y3QA
 sidebar_position: 2
 ---

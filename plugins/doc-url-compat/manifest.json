@@ -1,0 +1,542 @@
+{
+  "documents": [
+    {
+      "source": "docs/关于Y3QA.md",
+      "from": "/docs/关于Y3QA",
+      "to": "/docs/y3qa",
+      "anchors": {}
+    },
+    {
+      "source": "docs/简介.md",
+      "from": "/docs/简介",
+      "to": "/docs/intro",
+      "anchors": {}
+    },
+    {
+      "source": "docs/Y3AI开发教程/01-AI相关专业名称释义.md",
+      "from": "/docs/Y3AI开发教程/AI概念入门",
+      "to": "/docs/ai/concepts",
+      "anchors": {
+        "一llmlarge-language-model": "llm",
+        "1-什么是llm": "what-is-llm",
+        "2-不是真正无限循环": "generation-limits",
+        "3-预测是概率性的": "probabilistic-prediction",
+        "4-llm如何实现与用户的交流": "conversation",
+        "二context上下文": "context",
+        "三prompt提示词": "prompt",
+        "四context和prompt的关系": "context-and-prompt",
+        "五agent-与-harness": "agent-and-harness",
+        "1-agent围绕目标选择行动": "goal-directed-agent",
+        "2-agent-也可以指角色或配置对象": "agent-roles",
+        "3-harness运行支撑层": "harness",
+        "4-工具调用循环如何运行": "tool-loop",
+        "5-frameworkruntime-与-harness-的区别": "framework-runtime-harness",
+        "6-评测中的-harness-是另一种语境": "evaluation-harness",
+        "六rag": "rag",
+        "核心原理": "rag-principles",
+        "主要优势": "rag-benefits",
+        "七mcp": "mcp",
+        "八skill": "skill",
+        "技能如何工作": "skill-workflow",
+        "skillmd-文件": "skill-file",
+        "九mcp对比skill": "mcp-vs-skill",
+        "定义对比": "definitions",
+        "运行机制与性能差异": "execution-and-performance",
+        "什么时候用-mcp什么时候用-skill": "use-cases",
+        "用-mcp-的场景": "mcp-use-cases",
+        "用-skill-的场景": "skill-use-cases",
+        "如何选择": "choosing-tools"
+      }
+    },
+    {
+      "source": "docs/Y3AI开发教程/04-如何使用AI开发Y3项目.md",
+      "from": "/docs/Y3AI开发教程/如何使用AI开发Y3项目",
+      "to": "/docs/ai/agent-workflow",
+      "anchors": {
+        "1-选择客户端并确认环境": "choose-client",
+        "2-打开正确的工作目录": "working-directory",
+        "3-补充项目上下文": "project-context",
+        "4-连接工具或准备人工运行": "connect-tools",
+        "5-按具体任务开发与验证": "develop-and-verify"
+      }
+    },
+    {
+      "source": "docs/Y3AI开发教程/AssistantDevelopment.md",
+      "from": "/docs/Y3AI开发教程/AssistantDevelopment",
+      "to": "/docs/ai/y3maker-setup",
+      "anchors": {
+        "1-打开-y3maker": "open-y3maker",
+        "model-connection": "model-connection",
+        "3-检查模型回复": "check-response",
+        "project-check": "project-check",
+        "5-检查-y3-工具": "check-y3-tools"
+      }
+    },
+    {
+      "source": "docs/Y3AI开发教程/CHANGELOG.md",
+      "from": "/docs/Y3AI开发教程/CHANGELOG",
+      "to": "/docs/ai/changelog",
+      "anchors": {
+        "2026-年-6-月": "june-2026",
+        "2026-年-5-月": "may-2026",
+        "2026-年-4-月": "april-2026",
+        "2026-年-3-月": "march-2026"
+      }
+    },
+    {
+      "source": "docs/Y3AI开发教程/EnvironmentSetup.md",
+      "from": "/docs/Y3AI开发教程/EnvironmentSetup",
+      "to": "/docs/ai/project-setup",
+      "anchors": {
+        "1-安装-y3-编辑器并创建项目": "create-project",
+        "下载并安装-y3-编辑器": "install-editor",
+        "使用快捷方式打开编辑器": "open-editor",
+        "创建自己的第一个项目": "first-project",
+        "2-安装-vs-code-并切换中文": "setup-vscode",
+        "下载和安装": "install-vscode",
+        "安装中文语言包": "chinese-language-pack",
+        "3-安装-y3-开发助手": "install-y3-helper",
+        "从扩展商店安装": "extension-marketplace",
+        "4-用-vs-code-打开自己的-y3-工程": "open-project",
+        "support-tools": "support-tools",
+        "先让-y3maker-能正常回复": "check-y3maker",
+        "一次准备-gitpython-和-nodejs": "install-dependencies",
+        "6-初始化新项目的-y3-lua-库": "initialize-lua",
+        "7-启动一次游戏并完成检查": "verify-game"
+      }
+    },
+    {
+      "source": "docs/Y3AI开发教程/index.md",
+      "from": "/docs/Y3AI开发教程/",
+      "to": "/docs/ai",
+      "anchors": {
+        "选择入口": "getting-started",
+        "按需查阅": "reference"
+      }
+    },
+    {
+      "source": "docs/Y3AI开发教程/LuaReference.md",
+      "from": "/docs/Y3AI开发教程/LuaReference",
+      "to": "/docs/ai/project-structure",
+      "anchors": {
+        "工程目录": "project-layout",
+        "入口与初始化": "initialization",
+        "日志与诊断": "diagnostics"
+      }
+    },
+    {
+      "source": "docs/Y3AI开发教程/Tools.md",
+      "from": "/docs/Y3AI开发教程/Tools",
+      "to": "/docs/ai/mcp-tools",
+      "anchors": {
+        "y3-helper-mcpy3-helper": "y3-helper-mcpy3-helper",
+        "游戏控制": "game-control",
+        "调试与检查": "debugging",
+        "游戏运行时连接": "runtime-connection",
+        "y3-editor-mcpy3editor": "y3-editor-mcpy3editor",
+        "编辑器操作": "editor-operations",
+        "ui-查询导入与截图": "ui-tools",
+        "官方资源工具": "official-assets",
+        "本地资源导入": "import-assets",
+        "物编查询与导入导出": "object-editor",
+        "地图尺寸与地形": "map-and-terrain",
+        "地表纹理与植被": "textures-and-vegetation",
+        "场景实体点区域与路径": "scene-objects",
+        "触发器": "triggers",
+        "刷新与保存": "refresh-and-save",
+        "旧工具名称迁移": "legacy-tool-names"
+      }
+    },
+    {
+      "source": "docs/Y3AI开发教程/Troubleshooting.md",
+      "from": "/docs/Y3AI开发教程/Troubleshooting",
+      "to": "/docs/ai/troubleshooting",
+      "anchors": {
+        "按现象定位": "symptoms",
+        "找到正确的日志": "logs",
+        "用最小任务复现": "minimal-reproduction",
+        "发给-ai-的问题报告": "issue-report",
+        "从旧配置升级": "upgrade-config"
+      }
+    },
+    {
+      "source": "docs/Y3Tcp服务部署教程/00-功能介绍.md",
+      "from": "/docs/Y3Tcp服务部署教程/功能介绍",
+      "to": "/docs/tcp/overview",
+      "anchors": {
+        "自建全局存档": "global-storage",
+        "编辑器自带的全局存档功能": "built-in-storage",
+        "自建全局存档-1": "custom-storage",
+        "应用场景": "use-cases",
+        "全服聊天": "global-chat",
+        "流程图": "workflow",
+        "目前功能特性": "features"
+      }
+    },
+    {
+      "source": "docs/Y3Tcp服务部署教程/01-客户端示例项目下载.md",
+      "from": "/docs/Y3Tcp服务部署教程/客户端示例项目下载",
+      "to": "/docs/tcp/client-example",
+      "anchors": {}
+    },
+    {
+      "source": "docs/Y3Tcp服务部署教程/03-确定服务端地址.md",
+      "from": "/docs/Y3Tcp服务部署教程/确定服务端地址",
+      "to": "/docs/tcp/server-address",
+      "anchors": {}
+    },
+    {
+      "source": "docs/Y3Tcp服务部署教程/04-数据库基础概念讲解.md",
+      "from": "/docs/Y3Tcp服务部署教程/数据库基础概念讲解",
+      "to": "/docs/tcp/database-basics",
+      "anchors": {
+        "1-数据库名": "database-name",
+        "2-集合": "collections",
+        "3-文档": "documents"
+      }
+    },
+    {
+      "source": "docs/Y3Tcp服务部署教程/05-ECA接口.md",
+      "from": "/docs/Y3Tcp服务部署教程/ECA接口",
+      "to": "/docs/tcp/eca-api",
+      "anchors": {
+        "函数及其自定义事件回调": "functions-and-callbacks",
+        "1-本地玩家查询指定集合下的所有文档": "query-all",
+        "2-本地玩家查询指定集合下指定key的文档": "query-by-key",
+        "3-本地玩家查询指定集合下指定id的文档": "query-by-id",
+        "4-在指定集合中插入文档": "insert-document",
+        "5-更新指定集合下的指定key的文档": "update-by-key",
+        "6-更新指定集合下的指定id的文档": "update-by-id",
+        "7-删除指定集合下的指定key的文档": "delete-by-key",
+        "8-删除指定集合下的指定id的文档": "delete-by-id",
+        "9-增量更新指定文档的数值数据": "increment-values"
+      }
+    },
+    {
+      "source": "docs/Y3Tcp服务部署教程/06-可视化管理数据库.md",
+      "from": "/docs/Y3Tcp服务部署教程/可视化管理数据库",
+      "to": "/docs/tcp/database-management",
+      "anchors": {
+        "下载并安装mongodb-compass": "install-compass",
+        "链接数据库": "connect-database",
+        "1-创建链接": "create-connection",
+        "2-输入数据库地址端口号用户名密码": "connection-settings"
+      }
+    },
+    {
+      "source": "docs/Y3Websocket服务部署教程/00-功能介绍.md",
+      "from": "/docs/Y3Websocket服务部署教程/功能介绍",
+      "to": "/docs/websocket/overview",
+      "anchors": {
+        "当前客户端架构": "client-architecture",
+        "已验证范围": "verified-features",
+        "使用边界": "limitations"
+      }
+    },
+    {
+      "source": "docs/Y3Websocket服务部署教程/01-示例项目下载.md",
+      "from": "/docs/Y3Websocket服务部署教程/示例项目下载",
+      "to": "/docs/websocket/example",
+      "anchors": {
+        "下载项目": "download",
+        "主要文件": "files",
+        "websocket-lua-api": "websocket-lua-api",
+        "接入已有项目": "existing-project"
+      }
+    },
+    {
+      "source": "docs/Y3Websocket服务部署教程/02-如何链接开源游戏服务端框架.md",
+      "from": "/docs/Y3Websocket服务部署教程/如何链接开源游戏服务端框架",
+      "to": "/docs/websocket/server-framework",
+      "anchors": {
+        "1-部署-nakama": "deploy-nakama",
+        "2-配置-y3-客户端": "configure-client",
+        "3-认证并连接实时-socket": "authenticate-and-connect",
+        "4-在已有项目中接入-nakama": "integrate-nakama",
+        "5-y3-引擎适配层": "engine-adapter"
+      }
+    },
+    {
+      "source": "docs/Y3面对面会议分享文档/UI同步讲解.md",
+      "from": "/docs/Y3面对面会议分享文档/UI同步讲解",
+      "to": "/docs/talks/ui-sync",
+      "anchors": {
+        "界面逻辑中的帧同步事件同步": "frame-and-event-sync"
+      }
+    },
+    {
+      "source": "docs/Y3面对面会议分享文档/y3 custom_python.md",
+      "from": "/docs/Y3面对面会议分享文档/y3 custom_python",
+      "to": "/docs/talks/custom-python",
+      "anchors": {
+        "如何使用": "usage",
+        "rsa加密相关": "rsa",
+        "websocket相关-可用来连接一些开源游戏服务端框架": "websocket",
+        "判断模型是否为mdx模型": "mdx-model",
+        "区分地图运行环境是在maptest还是线上仅正式上线后可用": "runtime-environment",
+        "判断表格存档中是否存在指定key": "storage-key",
+        "获取界面控件的锚点值不同步": "ui-anchor"
+      }
+    },
+    {
+      "source": "docs/Y3面对面会议分享文档/小窗挂机UI实现分享.md",
+      "from": "/docs/Y3面对面会议分享文档/小窗挂机UI实现分享",
+      "to": "/docs/talks/idle-window-ui",
+      "anchors": {}
+    },
+    {
+      "source": "docs/Y3面对面会议分享文档/线上问题定位方案推荐.md",
+      "from": "/docs/Y3面对面会议分享文档/线上问题定位方案推荐",
+      "to": "/docs/talks/production-debugging",
+      "anchors": {
+        "拉取线上存档至本地测试": "download-save",
+        "vscode开发助手远程执行代码": "remote-execution",
+        "远程执行代码的另一个方案": "alternative-remote-execution"
+      }
+    },
+    {
+      "source": "docs/Y3面对面会议分享文档/补间动画.md",
+      "from": "/docs/Y3面对面会议分享文档/补间动画",
+      "to": "/docs/talks/tween-animation",
+      "anchors": {
+        "效果预览": "preview",
+        "应用场景": "use-cases",
+        "示例项目": "example",
+        "可视化曲线编辑": "curve-editor"
+      }
+    },
+    {
+      "source": "docs/Y3面对面会议分享文档/随机地形生成.md",
+      "from": "/docs/Y3面对面会议分享文档/随机地形生成",
+      "to": "/docs/talks/random-terrain",
+      "anchors": {
+        "思路参考": "references",
+        "项目地址": "project",
+        "核心逻辑": "core-logic",
+        "效果预览": "preview"
+      }
+    },
+    {
+      "source": "docs/Y3AI开发教程/03-Agent部署教程/CC Switch安装与使用.md",
+      "from": "/docs/Y3AI开发教程/Agent部署教程/CC Switch安装与使用",
+      "to": "/docs/ai/model-config",
+      "anchors": {
+        "1-安装-cc-switch": "install-cc-switch",
+        "prepare": "prepare",
+        "deepseek": "deepseek",
+        "第一步在-deepseek-开放平台创建密钥": "create-api-key",
+        "第二步-a配置-claude-code": "configure-claude-code",
+        "第二步-b配置-codex": "configure-codex",
+        "verify": "verify",
+        "official": "official",
+        "codex": "codex",
+        "claude-code": "claude-code",
+        "5-日常修改与切换": "switching",
+        "常见问题": "faq",
+        "来源与截图": "sources"
+      }
+    },
+    {
+      "source": "docs/Y3AI开发教程/03-Agent部署教程/MCP接入.md",
+      "from": "/docs/Y3AI开发教程/Agent部署教程/MCP接入",
+      "to": "/docs/ai/mcp-setup",
+      "anchors": {
+        "1-准备工程": "prepare-project",
+        "2-安装对应的迁移-skill": "install-migration-skill",
+        "codex": "codex",
+        "claude-code": "claude-code",
+        "3-迁移-skills-和-mcp-等配置": "migrate-config",
+        "4-启动服务并验证连接": "verify-connection",
+        "连接失败时": "connection-failures"
+      }
+    },
+    {
+      "source": "docs/Y3AI开发教程/03-Agent部署教程/前言.md",
+      "from": "/docs/Y3AI开发教程/Agent部署教程/前言",
+      "to": "/docs/ai/choose-agent",
+      "anchors": {
+        "当前推荐": "recommendations",
+        "作者个人推荐": "personal-recommendation",
+        "接下来怎么做": "next-steps"
+      }
+    },
+    {
+      "source": "docs/Y3AI开发教程/Y3MakerDirectory/index.md",
+      "from": "/docs/Y3AI开发教程/Y3MakerDirectory",
+      "to": "/docs/ai/y3maker-directory",
+      "anchors": {
+        "目录总览": "directory-overview",
+        "按目录深入阅读": "directory-guides",
+        "它们怎样配合": "collaboration"
+      }
+    },
+    {
+      "source": "docs/Y3AI开发教程/Y3MakerDirectory/Knowledge.md",
+      "from": "/docs/Y3AI开发教程/Y3MakerDirectory/Knowledge",
+      "to": "/docs/ai/y3maker-directory/knowledge",
+      "anchors": {
+        "两个阅读入口": "reading-entry-points",
+        "核心系统理解游戏基础机制": "core-systems",
+        "物编系统按对象类型查字段": "object-editor",
+        "ui-系统从数据结构到-lua-接入": "ui-system",
+        "其他专题与实战参考": "topics",
+        "与技能参考资料的区别": "skill-references"
+      }
+    },
+    {
+      "source": "docs/Y3AI开发教程/Y3MakerDirectory/Memory.md",
+      "from": "/docs/Y3AI开发教程/Y3MakerDirectory/Memory",
+      "to": "/docs/ai/y3maker-directory/memory",
+      "anchors": {
+        "三类记录的区别": "record-types",
+        "memorymd快速恢复项目背景": "project-background",
+        "sessions交接一次任务": "session-handoff",
+        "lua-issues区分-api-用错与运行时报错": "lua-issues",
+        "怎样保持记忆可靠": "reliable-memory"
+      }
+    },
+    {
+      "source": "docs/Y3AI开发教程/Y3MakerDirectory/Rules.md",
+      "from": "/docs/Y3AI开发教程/Y3MakerDirectory/Rules",
+      "to": "/docs/ai/y3maker-directory/rules",
+      "anchors": {
+        "mdc-文件怎么看": "mdc-files",
+        "rulesmdc核心索引": "rule-index",
+        "apimcp-与-ui-规则": "api-mcp-ui",
+        "测试与文档一致性规则": "testing-and-docs",
+        "memorymdc约定记录方式": "memory-rules",
+        "怎样维护项目规则": "maintaining-rules"
+      }
+    },
+    {
+      "source": "docs/Y3AI开发教程/Y3MakerDirectory/Skills.md",
+      "from": "/docs/Y3AI开发教程/Y3MakerDirectory/Skills",
+      "to": "/docs/ai/y3maker-directory/skills",
+      "anchors": {
+        "一个技能目录包含什么": "skill-layout",
+        "需求组织与环境准备": "requirements-and-setup",
+        "物编ui-与-lua-开发": "object-editor-ui-lua",
+        "地形测试与模板导出": "terrain-testing-export",
+        "skill参考文档与-mcp-怎样分工": "responsibilities"
+      }
+    },
+    {
+      "source": "docs/Y3AI开发教程/Y3MakerDirectory/Templates.md",
+      "from": "/docs/Y3AI开发教程/Y3MakerDirectory/Templates",
+      "to": "/docs/ai/y3maker-directory/templates",
+      "anchors": {
+        "先看模板等级": "template-levels",
+        "模板说明书里哪些字段最重要": "key-fields",
+        "全部模板": "all-templates",
+        "a-级通用工具与组件17-个": "level-a",
+        "b-级业务与-ui-基础模块12-个": "level-b",
+        "c-级需适配项目的业务系统7-个": "level-c",
+        "建议的复用顺序": "reuse-order"
+      }
+    },
+    {
+      "source": "docs/Y3AI开发教程/Y3MakerDirectory/ToolsAndConfig.md",
+      "from": "/docs/Y3AI开发教程/Y3MakerDirectory/ToolsAndConfig",
+      "to": "/docs/ai/y3maker-directory/tools-config",
+      "anchors": {
+        "tools本地辅助脚本": "local-tools",
+        "mcp_settingsjson连接哪些服务": "mcp-settings",
+        "spec-configjson开发文档生成到哪里": "spec-config",
+        "版本管理与运行生成文件": "version-control"
+      }
+    },
+    {
+      "source": "docs/Y3Tcp服务部署教程/02-服务端部署/Linux.md",
+      "from": "/docs/Y3Tcp服务部署教程/服务端部署/Linux",
+      "to": "/docs/tcp/linux",
+      "anchors": {
+        "演示平台-linux-ubuntu-2204-64位-uefi版": "platform",
+        "1-安装docker和docker-compose": "install-docker",
+        "2-克隆服务端文件": "clone-server",
+        "3-构建和启动服务": "start-services",
+        "4-验证部署": "verify-deployment",
+        "5-管理服务": "manage-services"
+      }
+    },
+    {
+      "source": "docs/Y3Tcp服务部署教程/02-服务端部署/Windows.md",
+      "from": "/docs/Y3Tcp服务部署教程/服务端部署/Windows",
+      "to": "/docs/tcp/windows",
+      "anchors": {
+        "演示平台-windows-11-24h2": "platform",
+        "1-根据自己的电脑架构确定下载哪个docker客户端": "choose-docker",
+        "2-安装好后运行程序一路下一步跳过即可等待应用初始化": "initialize-docker",
+        "3-克隆服务端项目": "clone-server",
+        "4-修改服务端配置文件docker-composeyml可选": "configure-server",
+        "5-打开项目文件夹": "open-project",
+        "6-在空白处同时按下shift鼠标右键在下拉列表中选择在此处打开powershell窗口": "open-powershell",
+        "7-构建和部署服务端": "deploy-server",
+        "8-内网穿透": "tunneling"
+      }
+    },
+    {
+      "source": "docs/Y3AI开发教程/03-Agent部署教程/Agent安装教程/Claude Code CLI部署教程.md",
+      "from": "/docs/Y3AI开发教程/Agent部署教程/Claude Code CLI部署教程",
+      "to": "/docs/ai/claude-code-cli",
+      "anchors": {
+        "安装": "installation",
+        "下一步": "next-steps"
+      }
+    },
+    {
+      "source": "docs/Y3AI开发教程/03-Agent部署教程/Agent安装教程/Claude Code for VSCode 扩展安装以及配置教程.md",
+      "from": "/docs/Y3AI开发教程/Agent部署教程/Claude Code for VSCode 扩展安装以及配置教程",
+      "to": "/docs/ai/claude-code-vscode",
+      "anchors": {
+        "1-安装扩展": "install-extension",
+        "2-打开扩展面板": "open-extension",
+        "下一步": "next-steps"
+      }
+    },
+    {
+      "source": "docs/Y3AI开发教程/03-Agent部署教程/Agent安装教程/Codex App安装教程.md",
+      "from": "/docs/Y3AI开发教程/Agent部署教程/Codex App安装教程",
+      "to": "/docs/ai/codex-app",
+      "anchors": {
+        "官方安装首选": "official-installation",
+        "镜像安装官方渠道失败时": "mirror-installation",
+        "下一步": "next-steps"
+      }
+    },
+    {
+      "source": "docs/Y3AI开发教程/03-Agent部署教程/Agent安装教程/Codex VSCode扩展安装教程.md",
+      "from": "/docs/Y3AI开发教程/Agent部署教程/Codex VSCode扩展安装教程",
+      "to": "/docs/ai/codex-vscode",
+      "anchors": {
+        "安装与打开": "installation",
+        "下一步": "next-steps"
+      }
+    },
+    {
+      "source": "docs/Y3AI开发教程/03-Agent部署教程/Agent安装教程/Codex部署教程.md",
+      "from": "/docs/Y3AI开发教程/Agent部署教程/Codex部署教程",
+      "to": "/docs/ai/codex-cli",
+      "anchors": {
+        "安装": "installation",
+        "下一步": "next-steps"
+      }
+    }
+  ],
+  "categories": [
+    {
+      "source": "docs/Y3AI开发教程/03-Agent部署教程/_category_.json",
+      "from": "/docs/category/03-agent部署教程",
+      "to": "/docs/ai/agent-setup"
+    },
+    {
+      "source": "docs/Y3AI开发教程/03-Agent部署教程/Agent安装教程/_category_.json",
+      "from": "/docs/category/agent-安装教程",
+      "to": "/docs/ai/agent-installation"
+    },
+    {
+      "source": "docs/Y3Tcp服务部署教程/02-服务端部署/_category_.json",
+      "from": "/docs/category/02-服务端部署",
+      "to": "/docs/tcp/server-deployment"
+    }
+  ]
+}

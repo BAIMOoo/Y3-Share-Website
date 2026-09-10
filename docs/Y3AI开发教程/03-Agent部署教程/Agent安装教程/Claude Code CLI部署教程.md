@@ -1,6 +1,6 @@
 ---
 title: Claude Code CLI
-slug: /Y3AI开发教程/Agent部署教程/Claude Code CLI部署教程
+slug: /ai/claude-code-cli
 showLastUpdateAuthor: true
 sidebar_position: 3
 pagination_next: Y3AI开发教程/Agent部署教程/CC Switch安装与使用
@@ -17,7 +17,9 @@ pagination_next: Y3AI开发教程/Agent部署教程/CC Switch安装与使用
 
 Claude Code CLI 在终端中使用，支持 Windows 10 1809+。图形界面可选[VS Code 扩展](<./Claude Code for VSCode 扩展安装以及配置教程.md>)。
 
-## 安装
+<span id="安装" className="legacy-anchor" />
+
+## 安装 {#installation}
 
 1. 在 Windows 开始菜单搜索并打开 **PowerShell**。
 2. 粘贴下面的命令，按回车安装：
@@ -38,7 +40,9 @@ claude --version
 
 [![Claude Code 官方备用安装入口：① Native Install，② Windows PowerShell 命令](../img/claude-install-page.png)](../img/claude-install-page.png "点击查看原图")
 
-## 下一步
+<span id="下一步" className="legacy-anchor" />
+
+## 下一步 {#next-steps}
 
 前往 [Codex/Claude 模型配置](<../CC Switch安装与使用.md>)，配置模型服务并验证连接。
 

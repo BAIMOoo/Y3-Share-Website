@@ -1,4 +1,5 @@
 ---
+slug: /ai/model-config
 title: Codex/Claude 模型配置
 sidebar_position: 5
 description: 使用 CC Switch 配置 Codex 和 Claude Code，以 DeepSeek V4 Flash 为例。
@@ -13,7 +14,9 @@ showLastUpdateAuthor: true
 
 :::
 
-## 1. 安装 CC Switch
+<span id="1-安装-cc-switch" className="legacy-anchor" />
+
+## 1. 安装 CC Switch {#install-cc-switch}
 
 <span id="1-下载并安装-windows-版"></span>
 
@@ -57,7 +60,9 @@ CC Switch 的基本操作是：**选择应用 → `+` 添加供应商 → 填写
 
 [![DeepSeek V4 Flash 参数示意图：Claude 使用 Anthropic 地址，Codex 使用 Responses 原生接口](./img/deepseek-flash-values.png)](./img/deepseek-flash-values.png "点击查看原图")
 
-### 第一步：在 DeepSeek 开放平台创建密钥
+<span id="第一步在-deepseek-开放平台创建密钥" className="legacy-anchor" />
+
+### 第一步：在 DeepSeek 开放平台创建密钥 {#create-api-key}
 
 **1. 登录平台。** 打开 [DeepSeek 开放平台](https://platform.deepseek.com/)注册或登录；从 [DeepSeek 官网](https://www.deepseek.com/en/)进入时，点击 **Access API**。
 
@@ -75,7 +80,9 @@ CC Switch 的基本操作是：**选择应用 → `+` 添加供应商 → 填写
 
 [![DeepSeek 创建密钥表单截图：填写 Y3-Agent 并点击 Create API key](./img/deepseek-platform-create.png)](./img/deepseek-platform-create.png "点击查看原图")
 
-### 第二步 A：配置 Claude Code
+<span id="第二步-a配置-claude-code" className="legacy-anchor" />
+
+### 第二步 A：配置 Claude Code {#configure-claude-code}
 
 **1. 打开添加页面。** 点击顶部带终端小标记的 **Claude Code 图标**（①），再点击橙色 **`+`**（②）。注意区分相邻的 Claude Desktop。
 
@@ -106,7 +113,9 @@ CC Switch 的基本操作是：**选择应用 → `+` 添加供应商 → 填写
 
 **5. 添加并启用。** 点击右下角 **添加**（③），回到 Claude 列表，在刚添加的供应商卡片上点击 **启用**。按钮未显示时，将鼠标移到卡片上；随后按[验证步骤](#verify)测试。
 
-### 第二步 B：配置 Codex
+<span id="第二步-b配置-codex" className="legacy-anchor" />
+
+### 第二步 B：配置 Codex {#configure-codex}
 
 先更新 CC Switch 和 Codex。CLI 执行 `codex --version`，应为 **0.144.0 或更新**，以支持预设的模型目录。
 
@@ -156,7 +165,7 @@ CC Switch 的基本操作是：**选择应用 → `+` 添加供应商 → 填写
 
 ## 4. 其他服务商与官方账号 {#official}
 
-### Codex
+### Codex {#codex}
 
 <span id="4-配置-codex"></span>
 <span id="优先使用第三方-base-url--api-key"></span>
@@ -165,7 +174,7 @@ CC Switch 的基本操作是：**选择应用 → `+` 添加供应商 → 填写
 - **其他 API 服务商**：选择 Codex → 添加供应商，优先选预设，没有时选自定义；按服务商说明填写名称、密钥、接口地址和模型。直连需兼容 Responses API；要求本地路由的预设需按 [CC Switch 供应商说明](https://github.com/farion1231/cc-switch/blob/main/docs/user-manual/zh/2-providers/2.1-add.md)开启路由服务和 Codex 接管，并保持运行。
 - **官方账号（可选）**：选择 OpenAI 官方 / 官方登录预设，保存并启用。重开 Codex 后登录 ChatGPT，CLI 可执行 `codex login`；已登录时可先验证，认证异常再按官方说明退出重登。
 
-### Claude Code
+### Claude Code {#claude-code}
 
 <span id="5-配置-claude-code"></span>
 <span id="优先使用第三方-base-url--api-key-1"></span>
@@ -176,7 +185,9 @@ CC Switch 的基本操作是：**选择应用 → `+` 添加供应商 → 填写
 
 两种方式都需**添加并启用**，随后按[验证步骤](#verify)重启客户端并测试；使用其他模型时核对所选模型 ID。
 
-## 5. 日常修改与切换
+<span id="5-日常修改与切换" className="legacy-anchor" />
+
+## 5. 日常修改与切换 {#switching}
 
 <span id="6-日常修改和切换"></span>
 
@@ -184,7 +195,9 @@ CC Switch 的基本操作是：**选择应用 → `+` 添加供应商 → 填写
 
 Codex 切换后需重启。切回官方账号时启用官方预设并检查登录状态，认证异常再重登。
 
-## 常见问题
+<span id="常见问题" className="legacy-anchor" />
+
+## 常见问题 {#faq}
 
 <span id="本例常见问题"></span>
 
@@ -202,7 +215,9 @@ Codex 切换后需重启。切回官方账号时启用官方预设并检查登�
 
 Windows 默认配置在用户目录下：Claude 为 `.claude/settings.json`，Codex 为 `.codex/auth.json` 和 `.codex/config.toml`，日常由 CC Switch 管理。
 
-## 来源与截图
+<span id="来源与截图" className="legacy-anchor" />
+
+## 来源与截图 {#sources}
 
 CC Switch 通用说明核对于 **2026-09-09**：[中文 README](https://github.com/farion1231/cc-switch/blob/main/README_ZH.md)、[快速上手](https://github.com/farion1231/cc-switch/blob/main/docs/user-manual/zh/1-getting-started/1.4-quickstart.md)、[供应商切换](https://github.com/farion1231/cc-switch/blob/main/docs/user-manual/zh/2-providers/2.2-switch.md)、[配置文件](https://github.com/farion1231/cc-switch/blob/main/docs/user-manual/zh/5-faq/5.1-config-files.md)。DeepSeek 参数核对于 **2026-09-10**：[Claude Code 接入](https://api-docs.deepseek.com/zh-cn/quick_start/agent_integrations/claude_code)、[Responses API](https://api-docs.deepseek.com/zh-cn/guides/responses_api)、[CC Switch v3.20.2 Codex 预设](https://github.com/farion1231/cc-switch/blob/v3.20.2/src/config/codexProviderPresets.ts)。未进行付费 API 实测。
 

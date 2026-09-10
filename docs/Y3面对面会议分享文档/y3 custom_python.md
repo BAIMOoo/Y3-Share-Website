@@ -1,9 +1,12 @@
 ---
+slug: /talks/custom-python
 title: y3 custom_python汇总
 showLastUpdateAuthor: true
 ---
 
-## 如何使用
+<span id="如何使用" className="legacy-anchor" />
+
+## 如何使用 {#usage}
 在关卡下的custom_eca/custom_python.py中可以自定义py的函数加载
 ![alt text](./img/custom_python路径.png)
 例子：
@@ -25,7 +28,9 @@ end)
 
 
 
-## RSA加密相关
+<span id="rsa加密相关" className="legacy-anchor" />
+
+## RSA加密相关 {#rsa}
 ```
 from Crypto.Cipher import PKCS1_v1_5
 from Crypto.PublicKey import RSA
@@ -59,7 +64,9 @@ global_api.RSA_encrypt_with_public_key = RSA_encrypt_with_public_key
 global_api.RSA_decrypt_with_private_key = RSA_decrypt_with_private_key
 ```
 
-## Websocket相关 （可用来连接一些开源游戏服务端框架）
+<span id="websocket相关-可用来连接一些开源游戏服务端框架" className="legacy-anchor" />
+
+## Websocket相关 （可用来连接一些开源游戏服务端框架） {#websocket}
 ```
 from typing import Any
 
@@ -122,7 +129,9 @@ if WebsocketTimeoutError is not None:
     _TIMEOUT_ERROR_TYPES = _TIMEOUT_ERROR_TYPES + (WebsocketTimeoutError,)
 ```
 
-## 判断模型是否为MDX模型
+<span id="判断模型是否为mdx模型" className="legacy-anchor" />
+
+## 判断模型是否为MDX模型 {#mdx-model}
 ```
 import clients.G as G
 from commons.black_box.api import global_api
@@ -132,7 +141,9 @@ def is_mdx_model(model_id):
 global_api.is_mdx_model = is_mdx_model
 ```
 
-## 区分地图运行环境是在maptest还是线上(仅正式上线后可用)
+<span id="区分地图运行环境是在maptest还是线上仅正式上线后可用" className="legacy-anchor" />
+
+## 区分地图运行环境是在maptest还是线上(仅正式上线后可用) {#runtime-environment}
 ```
 from _G import G;
 from commons.black_box.api import global_api
@@ -147,7 +158,9 @@ global_api.get_map_id=get_map_id
 # 正式环境中返回地图id，例如208888
 ```
 
-## 判断表格存档中是否存在指定key
+<span id="判断表格存档中是否存在指定key" className="legacy-anchor" />
+
+## 判断表格存档中是否存在指定key {#storage-key}
 ```
 def archive_table_has_key(role, index, key1=None, key2=None, key3=None):
     t = G.black_box.get_local_save_table(role._role_id, index)
@@ -161,7 +174,9 @@ def archive_table_has_key(role, index, key1=None, key2=None, key3=None):
 global_api.archive_table_has_key = archive_table_has_key
 ```
 
-## 获取界面控件的锚点值(不同步)
+<span id="获取界面控件的锚点值不同步" className="legacy-anchor" />
+
+## 获取界面控件的锚点值(不同步) {#ui-anchor}
 ```
 def get_ui_anchors_x(comp_name):
     ui_mgr = G.ui_editor_mgr

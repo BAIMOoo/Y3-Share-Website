@@ -1,4 +1,5 @@
 ---
+slug: /talks/idle-window-ui
 title: 小窗挂机UI实现分享
 showLastUpdateAuthor: true
 sidebar_position: 1

@@ -3,6 +3,7 @@
   "position": 1,
   "link": {
     "type": "generated-index",
-    "description": "根据你的平台选择相应教程"
+    "description": "根据你的平台选择相应教程",
+    "slug": "/tcp/server-deployment"
   }
 }

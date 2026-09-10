@@ -1,6 +1,6 @@
 ---
 title: Codex CLI
-slug: /Y3AI开发教程/Agent部署教程/Codex部署教程
+slug: /ai/codex-cli
 showLastUpdateAuthor: true
 sidebar_position: 1
 pagination_next: Y3AI开发教程/Agent部署教程/CC Switch安装与使用
@@ -21,7 +21,9 @@ pagination_next: Y3AI开发教程/Agent部署教程/CC Switch安装与使用
 
 Codex CLI 在终端中使用；图形界面可选 [Codex App](<./Codex App安装教程.md>)或 [Codex VS Code 扩展](<./Codex VSCode扩展安装教程.md>)。推荐 Windows 11；近期更新的 Windows 10 为尽力支持。
 
-## 安装
+<span id="安装" className="legacy-anchor" />
+
+## 安装 {#installation}
 
 先从 [Node.js 官网](https://nodejs.org/)安装当前 LTS，再通过 npm 安装 CLI。其他方式见[官方 CLI 文档](https://learn.chatgpt.com/docs/codex/cli)。
 
@@ -40,7 +42,9 @@ codex --version
 
 VS Code 扩展不包含独立 CLI，终端使用需单独安装。
 
-## 下一步
+<span id="下一步" className="legacy-anchor" />
+
+## 下一步 {#next-steps}
 
 前往 [Codex/Claude 模型配置](<../CC Switch安装与使用.md>)，配置模型服务并验证连接。
 

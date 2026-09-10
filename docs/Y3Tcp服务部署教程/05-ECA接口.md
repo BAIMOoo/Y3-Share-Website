@@ -1,10 +1,13 @@
 ---
+slug: /tcp/eca-api
 title: 05-ECA接口
 showLastUpdateAuthor: true
 sidebar_position: 5
 ---
 # 05-ECA接口
-## 函数及其自定义事件回调
+<span id="函数及其自定义事件回调" className="legacy-anchor" />
+
+## 函数及其自定义事件回调 {#functions-and-callbacks}
 **增删改查的函数均会返回一个请求id(类型为字符串)，如果需要回调函数，需要使用子触发模拟，具体格式参照下图**
 
 ![img](./img/请求和回调示例.png)
@@ -12,21 +15,27 @@ sidebar_position: 5
 ---
 
 
-### 1 本地玩家查询指定集合下的所有文档
+<span id="1-本地玩家查询指定集合下的所有文档" className="legacy-anchor" />
+
+### 1 本地玩家查询指定集合下的所有文档 {#query-all}
 查询成功返回指定集合下的所有文档，失败返回空表
 
 ![img](./img/本地玩家查询指定集合下的所有文档.png)
 
 ---
 
-### 2 本地玩家查询指定集合下指定key的文档
+<span id="2-本地玩家查询指定集合下指定key的文档" className="legacy-anchor" />
+
+### 2 本地玩家查询指定集合下指定key的文档 {#query-by-key}
 查询成功返回指定集合下的所有key匹配的文档（可能存在多个），失败返回空表
 
 ![img](./img/本地玩家查询指定集合下指定key的文档-1.png)
 
 ---
 
-### 3 本地玩家查询指定集合下指定id的文档
+<span id="3-本地玩家查询指定集合下指定id的文档" className="legacy-anchor" />
+
+### 3 本地玩家查询指定集合下指定id的文档 {#query-by-id}
 查询成功返回指定集合下的所有_id匹配的文档（通常只会有一个），失败返回空表
 
 **MongoDB中的_id字段是每个文档默认包含的字段，用于唯一标识文档**
@@ -35,7 +44,9 @@ sidebar_position: 5
 
 ---
 
-### 4 在指定集合中插入文档
+<span id="4-在指定集合中插入文档" className="legacy-anchor" />
+
+### 4 在指定集合中插入文档 {#insert-document}
 第二个参数传入一个表格变量即可
 
 **指定集合名不存在时，会自动新建集合**
@@ -43,7 +54,9 @@ sidebar_position: 5
 
 ---
 
-### 5 更新指定集合下的指定key的文档
+<span id="5-更新指定集合下的指定key的文档" className="legacy-anchor" />
+
+### 5 更新指定集合下的指定key的文档 {#update-by-key}
 第三个参数传入一个表格变量即可，会使用该表格覆盖指定key的文档。
 由于key匹配的文档可能存在多个，默认只覆盖第一个匹配的文档
 
@@ -51,24 +64,32 @@ sidebar_position: 5
 
 ---
 
-### 6 更新指定集合下的指定id的文档
+<span id="6-更新指定集合下的指定id的文档" className="legacy-anchor" />
+
+### 6 更新指定集合下的指定id的文档 {#update-by-id}
 第三个参数传入一个表格变量即可，会使用该表格覆盖指定_id的文档。，默认只覆盖第一个匹配的文档
 
 ![img](./img/更新指定集合下的指定id的文档.png)
 
 ---
 
-### 7 删除指定集合下的指定key的文档
+<span id="7-删除指定集合下的指定key的文档" className="legacy-anchor" />
+
+### 7 删除指定集合下的指定key的文档 {#delete-by-key}
 默认只删除第一个匹配的文档
 
 ---
 
-### 8 删除指定集合下的指定id的文档
+<span id="8-删除指定集合下的指定id的文档" className="legacy-anchor" />
+
+### 8 删除指定集合下的指定id的文档 {#delete-by-id}
 默认只删除第一个匹配的文档
 
 ---
 
-### 9 增量更新指定文档的数值数据
+<span id="9-增量更新指定文档的数值数据" className="legacy-anchor" />
+
+### 9 增量更新指定文档的数值数据 {#increment-values}
 ![alt text](./img/函数-增量更新指定文档的数值数据.png)
 
 筛选器要求为一维表格，当文档中的kv能满足与筛选器中的所有kv都相等时，视为筛选成功

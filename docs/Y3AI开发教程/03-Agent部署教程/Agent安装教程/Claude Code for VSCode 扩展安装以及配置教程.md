@@ -1,6 +1,6 @@
 ---
 title: Claude Code VS Code扩展
-slug: /Y3AI开发教程/Agent部署教程/Claude Code for VSCode 扩展安装以及配置教程
+slug: /ai/claude-code-vscode
 showLastUpdateAuthor: true
 sidebar_position: 4
 pagination_next: Y3AI开发教程/Agent部署教程/CC Switch安装与使用
@@ -19,7 +19,9 @@ pagination_next: Y3AI开发教程/Agent部署教程/CC Switch安装与使用
 
 在 VS Code 面板中使用 Claude Code，无需单独安装 CLI。Y3 项目环境见[准备 Y3 项目](../../EnvironmentSetup.md)配置。
 
-## 1. 安装扩展
+<span id="1-安装扩展" className="legacy-anchor" />
+
+## 1. 安装扩展 {#install-extension}
 
 [![VS Code 下载页：① Windows，② User Installer 的 x64 或 Arm64](../img/vscode-download.png)](../img/vscode-download.png "点击查看原图")
 
@@ -29,7 +31,9 @@ pagination_next: Y3AI开发教程/Agent部署教程/CC Switch安装与使用
 
 [![Anthropic 发布的扩展](../../Y3_AI_images/image25.png)](../../Y3_AI_images/image25.png "点击查看原图")
 
-## 2. 打开扩展面板
+<span id="2-打开扩展面板" className="legacy-anchor" />
+
+## 2. 打开扩展面板 {#open-extension}
 
 1. 用 VS Code 打开自己的工程和一个文件。
 2. 点击编辑器右上角的 Claude 图标；找不到时，按 `Ctrl+Shift+P` 搜索 Claude Code 入口。
@@ -38,7 +42,9 @@ pagination_next: Y3AI开发教程/Agent部署教程/CC Switch安装与使用
 
 能打开面板即安装成功。在终端执行 `claude` 或 `claude mcp add` 需安装[独立 CLI](<./Claude Code CLI部署教程.md>)。
 
-## 下一步
+<span id="下一步" className="legacy-anchor" />
+
+## 下一步 {#next-steps}
 
 前往 [Codex/Claude 模型配置](<../CC Switch安装与使用.md>)，配置模型服务并验证连接。
 

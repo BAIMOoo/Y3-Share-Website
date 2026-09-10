@@ -1,4 +1,5 @@
 ---
+slug: /ai/y3maker-directory/tools-config
 title: tools 与配置文件
 sidebar_position: 6
 showLastUpdateAuthor: true
@@ -8,7 +9,9 @@ showLastUpdateAuthor: true
 
 `tools/` 保存本地辅助脚本；根目录 JSON 配置 MCP 连接和开发文档输出。
 
-## tools：本地辅助脚本
+<span id="tools本地辅助脚本" className="legacy-anchor" />
+
+## tools：本地辅助脚本 {#local-tools}
 
 | 文件 | 用途 | 阅读重点 |
 | --- | --- | --- |
@@ -19,7 +22,9 @@ showLastUpdateAuthor: true
 
 脚本从本地终端运行，不会自动注册为 MCP 工具。
 
-## mcp_settings.json：连接哪些服务
+<span id="mcp_settingsjson连接哪些服务" className="legacy-anchor" />
+
+## mcp_settings.json：连接哪些服务 {#mcp-settings}
 
 `mcpServers` 按服务名保存连接配置：
 
@@ -44,7 +49,9 @@ showLastUpdateAuthor: true
 
 外部 Agent 的格式和作用域可能不同，按[接入教程](../03-Agent部署教程/MCP接入.md)迁移。
 
-## spec-config.json：开发文档生成到哪里
+<span id="spec-configjson开发文档生成到哪里" className="legacy-anchor" />
+
+## spec-config.json：开发文档生成到哪里 {#spec-config}
 
 | 配置项 | 作用 |
 | --- | --- |
@@ -63,7 +70,9 @@ showLastUpdateAuthor: true
 
 `_comment` 字段是配置说明字符串，不是 JSON 注释语法。
 
-## 版本管理与运行生成文件
+<span id="版本管理与运行生成文件" className="legacy-anchor" />
+
+## 版本管理与运行生成文件 {#version-control}
 
 | 文件或目录 | 用途 |
 | --- | --- |

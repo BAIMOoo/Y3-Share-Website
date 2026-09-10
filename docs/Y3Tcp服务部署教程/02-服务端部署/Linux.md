@@ -1,10 +1,15 @@
 ---
+slug: /tcp/linux
 title: Linux部署教程
 showLastUpdateAuthor:: true
 ---
 # Linux部署教程
-## 演示平台: Linux (Ubuntu 22.04 64位 UEFI版)
-### 1. 安装Docker和Docker Compose
+<span id="演示平台-linux-ubuntu-2204-64位-uefi版" className="legacy-anchor" />
+
+## 演示平台: Linux (Ubuntu 22.04 64位 UEFI版) {#platform}
+<span id="1-安装docker和docker-compose" className="legacy-anchor" />
+
+### 1. 安装Docker和Docker Compose {#install-docker}
 ```
 如果你的Linux系统还没有安装Docker和Docker Compose，需要先安装
 # 更新包索引
@@ -22,7 +27,9 @@ sudo systemctl enable docker
 ```
 
 
-### 2. **克隆服务端文件**
+<span id="2-克隆服务端文件" className="legacy-anchor" />
+
+### 2. **克隆服务端文件** {#clone-server}
 ```
 # 克隆项目
 git clone https://gitee.com/baim00/y3-tcp-server.git
@@ -50,7 +57,9 @@ environment:
 ```
 
 
-### 3. **构建和启动服务**
+<span id="3-构建和启动服务" className="legacy-anchor" />
+
+### 3. **构建和启动服务** {#start-services}
 ```
 # 注意docker-compose命令都需要在项目路径下执行
 # 构建并启动服务（后台运行）
@@ -73,7 +82,9 @@ sudo vi /etc/docker/daemon.json
 ```
 
 
-### 4. **验证部署**
+<span id="4-验证部署" className="legacy-anchor" />
+
+### 4. **验证部署** {#verify-deployment}
 ```
 检查服务是否正常运行：
 # 查看服务器日志
@@ -83,7 +94,9 @@ docker-compose logs server
 ![img](../img/成功部署输出.png)
 
 
-### 5. **管理服务**
+<span id="5-管理服务" className="legacy-anchor" />
+
+### 5. **管理服务** {#manage-services}
 ```
 # 停止服务
 docker-compose stop

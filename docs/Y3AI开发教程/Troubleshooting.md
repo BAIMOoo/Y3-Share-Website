@@ -1,4 +1,5 @@
 ---
+slug: /ai/troubleshooting
 title: 排查问题
 sidebar_position: 10
 showLastUpdateAuthor: true
@@ -8,7 +9,9 @@ showLastUpdateAuthor: true
 
 先在下表找到现象，再收集对应的错误信息。分享日志、截图或配置前，遮盖 API Key 和令牌。
 
-## 按现象定位
+<span id="按现象定位" className="legacy-anchor" />
+
+## 按现象定位 {#symptoms}
 
 | 现象 | 怎么处理 |
 | --- | --- |
@@ -22,17 +25,19 @@ showLastUpdateAuthor: true
 | 工具连到了另一工程 | 核对 VS Code、编辑器实例及端口归属，再重新连接目标工程 |
 | `y3editor` 连接失败 | 打开对应编辑器和工程，检查版本、服务日志及 8765 地址 |
 | `y3runtime` 离线 | 先启动游戏，再检查 8767 服务；必要时刷新或重连 |
-| 找不到旧工具名称 | 刷新工具列表，查[旧名称迁移表](./Tools.md#旧工具名称迁移) |
+| 找不到旧工具名称 | 刷新工具列表，查[旧名称迁移表](./Tools.md#legacy-tool-names) |
 | Lua 静态检查失败 | 检查 Lua 依赖扩展与工作区，查看 VS Code“问题”面板和助手日志 |
 | 改了代码但没有效果 | 保存文件，检查主地图、入口和模块是否加载，再完整重启游戏 |
 | 日志正常，单位或 UI 不对 | 检查资源 ID、位置、镜头、控件路径、绑定和创建返回值 |
-| UI/物编修改被覆盖 | 按[刷新与保存顺序](./Tools.md#刷新与保存)从已保存的版本重做 |
+| UI/物编修改被覆盖 | 按[刷新与保存顺序](./Tools.md#refresh-and-save)从已保存的版本重做 |
 | 软件安装后仍找不到命令 | 完全退出并重开 VS Code，再让 Y3Maker 检查程序路径和版本 |
 | 安装或下载超时 | 先核对安装进度和进程，保留错误；避免重复启动安装 |
 
 默认 MCP 地址用于同一 Windows 主机上的客户端和编辑器。地址含义与配置见[MCP 接入](./03-Agent部署教程/MCP接入.md)。
 
-## 找到正确的日志
+<span id="找到正确的日志" className="legacy-anchor" />
+
+## 找到正确的日志 {#logs}
 
 - **Lua 错误：**主地图脚本目录的 `.log/lua_player01.log`，末尾编号对应玩家。确认文件修改时间属于本轮运行。
 - **编辑器错误：**在编辑器“窗口”菜单打开日志窗口；“运行日志”页可查看游戏信息，也可用 `get_editor_log` 读取编辑器日志。
@@ -40,13 +45,17 @@ showLastUpdateAuthor: true
 
 复制第一条错误和完整堆栈（报错后列出的文件、行号和调用记录）。只有截图时，往往看不到完整定位信息。
 
-## 用最小任务复现
+<span id="用最小任务复现" className="legacy-anchor" />
+
+## 用最小任务复现 {#minimal-reproduction}
 
 依次检查：地图本身能否启动 → 模型能否回复 → 只读工具能否调用 → 目标业务能否运行。记录首次失败的步骤，避免同时改动多个环节。
 
 已有项目先保存改动；不要把删除配置目录或反复初始化当作通用修复。
 
-## 发给 AI 的问题报告
+<span id="发给-ai-的问题报告" className="legacy-anchor" />
+
+## 发给 AI 的问题报告 {#issue-report}
 
 ```text
 目标与实际结果：希望发生什么，目前哪里不对。
@@ -58,7 +67,9 @@ showLastUpdateAuthor: true
 请先定位原因，做最小修复，再复测原功能，报告结果和未验证项。
 ```
 
-## 从旧配置升级
+<span id="从旧配置升级" className="legacy-anchor" />
+
+## 从旧配置升级 {#upgrade-config}
 
 旧教程中的 `.codemaker` 与当前 `.y3maker` 有不同用途，不能随意互换；当前 MCP 配置读取 `.y3maker/mcp_settings.json`，仅部分旧技能目录保留兼容。
 

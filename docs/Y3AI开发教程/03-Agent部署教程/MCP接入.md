@@ -1,4 +1,5 @@
 ---
+slug: /ai/mcp-setup
 title: 连接 Y3 配套MCP
 sidebar_position: 6
 showLastUpdateAuthor: true
@@ -8,27 +9,33 @@ Codex 和 Claude Code 可通过 [Y3Maker 迁移 Skills](https://github.com/BAIMO
 
 继续使用 Y3Maker 时，初始化后已有默认 MCP 配置，按[配置 Y3Maker](../AssistantDevelopment.md#project-check)检查即可。
 
-## 1. 准备工程
+<span id="1-准备工程" className="legacy-anchor" />
+
+## 1. 准备工程 {#prepare-project}
 
 按[Y3 项目环境](../EnvironmentSetup.md)初始化工程，再用 Agent 打开它。工程中应有 `.y3maker/` 目录；若没有，检查工程路径和初始化状态。
 
-## 2. 安装对应的迁移 skill
+<span id="2-安装对应的迁移-skill" className="legacy-anchor" />
+
+## 2. 安装对应的迁移 skill {#install-migration-skill}
 
 向所用 Agent 发送对应请求：
 
-### Codex
+### Codex {#codex}
 
 ```text
 请从 GitHub 仓库 https://github.com/BAIMOoo/y3maker-migration-skills 安装 sync-y3maker-to-codex skill，并确认安装后可以被当前 Codex 环境识别。
 ```
 
-### Claude Code
+### Claude Code {#claude-code}
 
 ```text
 请从 GitHub 仓库 https://github.com/BAIMOoo/y3maker-migration-skills 安装 sync-y3maker-to-claude skill，并确认安装后可以被当前 Claude Code 环境识别。
 ```
 
-## 3. 迁移 skills 和 MCP 等配置
+<span id="3-迁移-skills-和-mcp-等配置" className="legacy-anchor" />
+
+## 3. 迁移 skills 和 MCP 等配置 {#migrate-config}
 
 安装后，在同一工程中发送：
 
@@ -45,7 +52,9 @@ Codex 和 Claude Code 可通过 [Y3Maker 迁移 Skills](https://github.com/BAIMO
 
 后续 `.y3maker/` 更新时，再用同一 skill 同步差异；它会通过迁移记录跟踪同步，保留原始目录。
 
-## 4. 启动服务并验证连接
+<span id="4-启动服务并验证连接" className="legacy-anchor" />
+
+## 4. 启动服务并验证连接 {#verify-connection}
 
 迁移配置后还需启动服务：
 
@@ -64,7 +73,9 @@ Codex 和 Claude Code 可通过 [Y3Maker 迁移 Skills](https://github.com/BAIMO
 
 **完成标志：**所需 skills 已识别、MCP 工具可发现，且至少一次只读调用成功并返回当前工程的结果。运行时服务需在游戏启动后检查，服务与工具清单见[工具参考](../Tools.md)。
 
-## 连接失败时
+<span id="连接失败时" className="legacy-anchor" />
+
+## 连接失败时 {#connection-failures}
 
 **先检查 VS Code 和 Y3 编辑器是否正在运行，并打开了正确的目录或项目：**
 

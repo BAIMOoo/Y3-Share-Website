@@ -1,4 +1,5 @@
 ---
+slug: /ai/y3maker-directory/skills
 title: skills：技能与配套资料
 sidebar_position: 3
 showLastUpdateAuthor: true
@@ -8,7 +9,9 @@ showLastUpdateAuthor: true
 
 `skills/README.md` 是技能索引。每个技能的 `SKILL.md` 说明适用条件、步骤、参考资料与输出要求。
 
-## 一个技能目录包含什么
+<span id="一个技能目录包含什么" className="legacy-anchor" />
+
+## 一个技能目录包含什么 {#skill-layout}
 
 目录示意（不一定全部存在）：
 
@@ -24,7 +27,9 @@ skills/某个技能/
 
 先读 `SKILL.md`，再按引用查资料、准备输入和依赖、运行脚本并验证。
 
-## 需求组织与环境准备
+<span id="需求组织与环境准备" className="legacy-anchor" />
+
+## 需求组织与环境准备 {#requirements-and-setup}
 
 | 技能 | 用途与阅读重点 |
 | --- | --- |
@@ -44,7 +49,9 @@ skills/某个技能/
 
 示例供参考，当前项目产物按 `spec-config.json` 指定的位置保存。
 
-## 物编、UI 与 Lua 开发
+<span id="物编ui-与-lua-开发" className="legacy-anchor" />
+
+## 物编、UI 与 Lua 开发 {#object-editor-ui-lua}
 
 | 技能 | 职责 | 重点资料 |
 | --- | --- | --- |
@@ -58,7 +65,9 @@ skills/某个技能/
 
 `y3-lua-pipeline/references/` 按需查阅 `unit.md`、`ability.md`、`item.md`、`timer.md`、`ui-events.md`，或 `api_errors.md`、`common_errors.md` 等错题资料。
 
-## 地形、测试与模板导出
+<span id="地形测试与模板导出" className="legacy-anchor" />
+
+## 地形、测试与模板导出 {#terrain-testing-export}
 
 | 技能 | 职责 | 重点资料 |
 | --- | --- | --- |
@@ -69,6 +78,8 @@ skills/某个技能/
 
 修改地形模板前，需查清 `template_meta.json`、地形 JSON 与资源数据的关联；测试报告应记录实际执行结果。
 
-## Skill、参考文档与 MCP 怎样分工
+<span id="skill参考文档与-mcp-怎样分工" className="legacy-anchor" />
+
+## Skill、参考文档与 MCP 怎样分工 {#responsibilities}
 
 Skill 组织流程，参考文档提供依据，MCP 执行导入、刷新与调试等操作。执行需要可用的工具和工程环境；新增或调整技能后，应确认 Agent 已识别入口，外部 Agent 不一定自动加载 `.y3maker/skills/`。

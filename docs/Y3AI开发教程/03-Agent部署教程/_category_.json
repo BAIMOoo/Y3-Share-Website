@@ -3,7 +3,7 @@
   "position": 5,
   "link": {
     "type": "generated-index",
-    "slug": "/category/03-agent部署教程",
+    "slug": "/ai/agent-setup",
     "description": "从前言了解选型建议，安装所选 Agent，再完成必装工具 CC Switch 的可视化配置，最后接入 Y3 MCP。"
   }
 }

@@ -1,4 +1,5 @@
 ---
+slug: /ai/changelog
 title: Y3Maker 更新记录
 sidebar_position: 13
 showLastUpdateAuthor: true
@@ -10,13 +11,17 @@ showLastUpdateAuthor: true
 
 以下为 2026 年 3～6 月的知识库、流程和模板更新，未逐条对应最低软件版本。
 
-## 2026 年 6 月
+<span id="2026-年-6-月" className="legacy-anchor" />
+
+## 2026 年 6 月 {#june-2026}
 
 - 整理并优化功能模板，包含结算、二次确认弹窗、AOE 点选、UI 对象池、难度选择、暂停弹窗等模板。
 - 新增 HUD 相关模板，包含主控台、顶部信息、统计信息。
 - 修复模板 Lua 语法问题和 LuaLS 注解诊断问题。
 
-## 2026 年 5 月
+<span id="2026-年-5-月" className="legacy-anchor" />
+
+## 2026 年 5 月 {#may-2026}
 
 - 更新 A/B/C/D 四个等级的功能模板体系，并新增和迭代多选一、技能创建、投射物技能、AOE 技能、暂停游戏、羁绊计数器、漂浮提示 UI、属性系统、结算、背包、商店、逻辑框架等模板。
   - A 级：通用模板，低依赖，传参即可复用。
@@ -28,7 +33,9 @@ showLastUpdateAuthor: true
 - 补充实战参考知识库。
 - 清理废弃模板和冗余文件，修复部分模板编码问题。
 
-## 2026 年 4 月
+<span id="2026-年-4-月" className="legacy-anchor" />
+
+## 2026 年 4 月 {#april-2026}
 
 - 新增快速环境配置能力，降低首次配置成本。
 - 新增自动化测试能力，支持测试计划生成、UI 点击、Lua 执行、日志检查、截图存证和测试报告输出。
@@ -41,7 +48,9 @@ showLastUpdateAuthor: true
 - 大量整理知识库，补充属性、KV、存档、阵营、事件、伤害、运行模式、地形、物编、UI 等系统资料。
 - 清理冗余规则和旧引用，将多处旧路径改为相对路径。
 
-## 2026 年 3 月
+<span id="2026-年-3-月" className="legacy-anchor" />
+
+## 2026 年 3 月 {#march-2026}
 
 - 新增 `.y3maker` 基础目录、基础规则、skill 调用规则。
 - 新增和完善 UI 生成能力，包含 UI 生成流程、UI JSON、UI 组件说明、适配规则等内容。

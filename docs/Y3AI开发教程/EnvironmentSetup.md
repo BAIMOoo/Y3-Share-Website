@@ -1,4 +1,5 @@
 ---
+slug: /ai/project-setup
 title: 准备 Y3 项目
 sidebar_position: 1
 showLastUpdateAuthor: true
@@ -30,11 +31,15 @@ showLastUpdateAuthor: true
 | Python 3 | 运行技能中的 UI、物编、地形等辅助脚本 |
 | Node.js LTS | 运行 JavaScript 工具和 npm 程序 |
 
-## 1. 安装 Y3 编辑器并创建项目
+<span id="1-安装-y3-编辑器并创建项目" className="legacy-anchor" />
+
+## 1. 安装 Y3 编辑器并创建项目 {#create-project}
 
 已有编辑器可直接从“创建自己的第一个项目”开始。
 
-### 下载并安装 Y3 编辑器
+<span id="下载并安装-y3-编辑器" className="legacy-anchor" />
+
+### 下载并安装 Y3 编辑器 {#install-editor}
 
 1. 打开 [Y3 开发者学院](https://163.com/learn/)，点击 **下载编辑器**。
 2. 下载完成后按 `Ctrl+J` 打开浏览器下载列表，双击安装程序；也可点“在文件夹中显示”后打开。
@@ -44,14 +49,18 @@ showLastUpdateAuthor: true
 6. **完整路径建议不含空格和中文，包括上级文件夹。** 例如避开 `D:\Program Files\Y3Editor` 和 `D:\游戏工具\Y3Editor`。
 7. 确认路径，点击安装，等待完成。
 
-### 使用快捷方式打开编辑器
+<span id="使用快捷方式打开编辑器" className="legacy-anchor" />
+
+### 使用快捷方式打开编辑器 {#open-editor}
 
 1. 双击安装程序自动创建的 Y3 编辑器快捷方式。
 2. 按登录页提示登录或注册，等待更新结束。
 
 **完成标志：**看到编辑器首页。
 
-### 创建自己的第一个项目
+<span id="创建自己的第一个项目" className="legacy-anchor" />
+
+### 创建自己的第一个项目 {#first-project}
 
 1. 在首页进入新建项目界面，选择一个简单模板。
 2. 填写项目名称，例如 `MyFirstY3Project`。
@@ -67,9 +76,13 @@ showLastUpdateAuthor: true
 
 工程目录保存的是项目文件，与软件安装目录不同。若看不到完整文件名，在 Windows 文件资源管理器的“查看”菜单中开启“文件扩展名”。
 
-## 2. 安装 VS Code 并切换中文
+<span id="2-安装-vs-code-并切换中文" className="legacy-anchor" />
 
-### 下载和安装
+## 2. 安装 VS Code 并切换中文 {#setup-vscode}
+
+<span id="下载和安装" className="legacy-anchor" />
+
+### 下载和安装 {#install-vscode}
 
 1. 打开 [VS Code 官方下载页](https://code.visualstudio.com/download)，选择 **Windows > User Installer（用户安装版）**，通常不需要管理员权限。
 2. 普通 Intel/AMD 电脑一般选择 **x64**。拿不准时，在 Windows“设置 > 系统 > 关于”查看“系统类型”，按处理器架构选择。
@@ -82,7 +95,9 @@ showLastUpdateAuthor: true
 
 ![安装时的附加任务选项](./Y3_AI_images/image4.png)
 
-### 安装中文语言包
+<span id="安装中文语言包" className="legacy-anchor" />
+
+### 安装中文语言包 {#chinese-language-pack}
 
 界面已经是中文时可跳过。
 
@@ -95,9 +110,13 @@ showLastUpdateAuthor: true
 
 **完成标志：**顶部菜单显示“文件”“编辑”“查看”等中文文字。
 
-## 3. 安装 Y3 开发助手
+<span id="3-安装-y3-开发助手" className="legacy-anchor" />
 
-### 从扩展商店安装
+## 3. 安装 Y3 开发助手 {#install-y3-helper}
+
+<span id="从扩展商店安装" className="legacy-anchor" />
+
+### 从扩展商店安装 {#extension-marketplace}
 
 1. 按 `Ctrl+Shift+X`，搜索 `Y3开发助手`。
 2. 核对名称 **Y3开发助手**、发布者 **sumneko**。搜索不明确时，可直接输入唯一标识 `sumneko.y3-helper`。
@@ -108,7 +127,9 @@ showLastUpdateAuthor: true
 
 **完成标志：**详情页出现“禁用”“卸载”等操作。若提示版本不兼容，从“帮助 > 检查更新”更新 VS Code 后重试。
 
-## 4. 用 VS Code 打开自己的 Y3 工程
+<span id="4-用-vs-code-打开自己的-y3-工程" className="legacy-anchor" />
+
+## 4. 用 VS Code 打开自己的 Y3 工程 {#open-project}
 
 1. 保持编辑器打开自己的项目，在 VS Code 点击 **文件 > 打开文件夹**。
 2. 选择第 1 节记下的、包含 `header.project` 的文件夹，点击“选择文件夹”。
@@ -125,7 +146,9 @@ showLastUpdateAuthor: true
 
 ## 5. 用自带的 Y3Maker 安装辅助软件 {#support-tools}
 
-### 先让 Y3Maker 能正常回复
+<span id="先让-y3maker-能正常回复" className="legacy-anchor" />
+
+### 先让 Y3Maker 能正常回复 {#check-y3maker}
 
 点击“打开 Y3Maker”，完成[配置 Y3Maker](./AssistantDevelopment.md#model-connection)中的模型连接和回复检查，再回本节使用提示词。模型服务信息需由你使用的服务方或团队提供。
 
@@ -133,7 +156,9 @@ showLastUpdateAuthor: true
 <span id="python用到相关脚本时再准备"></span>
 <span id="nodejs用到相关工具时再准备"></span>
 
-### 一次准备 Git、Python 和 Node.js
+<span id="一次准备-gitpython-和-nodejs" className="legacy-anchor" />
+
+### 一次准备 Git、Python 和 Node.js {#install-dependencies}
 
 将下面整段文字复制给 **Y3Maker**：
 
@@ -151,7 +176,9 @@ showLastUpdateAuthor: true
 
 **完成标志：**Git、Python、Node.js 三项均检查通过，pip 和 npm 可用。技能需要额外的 Python 库时，再由 Y3Maker 根据具体脚本补齐。
 
-## 6. 初始化新项目的 Y3 Lua 库
+<span id="6-初始化新项目的-y3-lua-库" className="legacy-anchor" />
+
+## 6. 初始化新项目的 Y3 Lua 库 {#initialize-lua}
 
 初始化会下载 Lua 库、项目资料并写入默认配置。**本节用于新项目；已有业务代码的工程先检查现有配置，避免覆盖。**
 
@@ -171,7 +198,9 @@ showLastUpdateAuthor: true
 
 `EntryMap` 只是常见主地图名，以自己的工程为准。文件齐全且没有失败提示，即可继续；更多目录说明见[工程与 Lua 目录结构参考](./LuaReference.md)。
 
-## 7. 启动一次游戏并完成检查
+<span id="7-启动一次游戏并完成检查" className="legacy-anchor" />
+
+## 7. 启动一次游戏并完成检查 {#verify-game}
 
 1. 在 Y3 编辑器中保存项目。
 2. 在助手 **功能 > 启动游戏** 中启动，或使用编辑器自身的运行入口。

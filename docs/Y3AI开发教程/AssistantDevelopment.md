@@ -1,4 +1,5 @@
 ---
+slug: /ai/y3maker-setup
 title: 配置 Y3Maker
 sidebar_position: 2
 showLastUpdateAuthor: true
@@ -20,7 +21,9 @@ showLastUpdateAuthor: true
 
 先按[准备 Y3 项目](./EnvironmentSetup.md)装好软件并打开工程。本页分两段：**第 1～3 步连接模型；工程初始化后，再做第 4～5 步。**
 
-## 1. 打开 Y3Maker
+<span id="1-打开-y3maker" className="legacy-anchor" />
+
+## 1. 打开 Y3Maker {#open-y3maker}
 
 在 Y3 开发助手面板点击 **打开 Y3Maker**。旧截图中的“打开 codemaker”是它的历史名称。
 
@@ -55,7 +58,9 @@ showLastUpdateAuthor: true
 
 旧截图中的名称和协议选项可能不同，以上表为准。
 
-## 3. 检查模型回复
+<span id="3-检查模型回复" className="legacy-anchor" />
+
+## 3. 检查模型回复 {#check-response}
 
 回到 Y3Maker，发送：
 
@@ -84,7 +89,9 @@ showLastUpdateAuthor: true
 
 ![技能与 MCP 状态](./Y3_AI_images/y3maker/skills-mcp-loaded.png)
 
-## 5. 检查 Y3 工具
+<span id="5-检查-y3-工具" className="legacy-anchor" />
+
+## 5. 检查 Y3 工具 {#check-y3-tools}
 
 初始化后，`.y3maker` 下默认已有 `y3-helper` 和 `y3editor` 的 MCP 配置。连接这些工具前，还需要启动对应的软件并打开项目：
 

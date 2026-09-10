@@ -2,7 +2,7 @@
 title: .y3maker 目录与文档说明
 sidebar_label: 目录概览
 sidebar_position: 0
-slug: /Y3AI开发教程/Y3MakerDirectory
+slug: /ai/y3maker-directory
 showLastUpdateAuthor: true
 ---
 
@@ -12,7 +12,9 @@ showLastUpdateAuthor: true
 
 本组文档依据本机 `y3-maker-config`，文件以工程实际版本为准；配置库路径均相对于 `.y3maker/`。
 
-## 目录总览
+<span id="目录总览" className="legacy-anchor" />
+
+## 目录总览 {#directory-overview}
 
 ```text
 工程根目录/
@@ -29,7 +31,9 @@ showLastUpdateAuthor: true
 └─ maps/                  地图数据与脚本
 ```
 
-## 按目录深入阅读
+<span id="按目录深入阅读" className="legacy-anchor" />
+
+## 按目录深入阅读 {#directory-guides}
 
 | 子文档 | 查阅内容 |
 | --- | --- |
@@ -40,7 +44,9 @@ showLastUpdateAuthor: true
 | [templates：功能模板](./Templates.md) | 模板等级、依赖与接入方式 |
 | [tools 与配置文件](./ToolsAndConfig.md) | 辅助脚本、MCP 连接与文档输出配置 |
 
-## 它们怎样配合
+<span id="它们怎样配合" className="legacy-anchor" />
+
+## 它们怎样配合 {#collaboration}
 
 制作背包时，从 **knowledge** 查物品和 UI 规范，按 **rules** 和 **skills** 开发，按需复用 **templates**、调用辅助脚本及 MCP，最后将结果写入 **memory**。按任务查阅即可，无需一次读完。
 

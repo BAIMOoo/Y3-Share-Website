@@ -1,6 +1,6 @@
 ---
 title: Codex App
-slug: /Y3AI开发教程/Agent部署教程/Codex App安装教程
+slug: /ai/codex-app
 sidebar_position: 0
 pagination_next: Y3AI开发教程/Agent部署教程/CC Switch安装与使用
 description: 在 Windows 上通过官方渠道或镜像安装包安装 Codex 桌面应用。
@@ -9,7 +9,9 @@ showLastUpdateAuthor: true
 
 Codex App 是作者首推的客户端。以下为 Windows 安装步骤。
 
-## 官方安装（首选）
+<span id="官方安装首选" className="legacy-anchor" />
+
+## 官方安装（首选） {#official-installation}
 
 从[官方 Windows 桌面应用页面](https://developers.openai.com/codex/windows/windows-app)下载安装，或在 PowerShell 中执行：
 
@@ -21,7 +23,9 @@ winget install --id 9PLM9XGG6VKS -s msstore
 
 [![官方 Windows 页面：桌面应用下载链接](../img/codex-official-download.png)](../img/codex-official-download.png "点击查看原图")
 
-## 镜像安装（官方渠道失败时）
+<span id="镜像安装官方渠道失败时" className="legacy-anchor" />
+
+## 镜像安装（官方渠道失败时） {#mirror-installation}
 
 若 Microsoft Store 或 `winget` 安装失败（如 Windows 更新服务被禁用），可使用 [Wangnov/codex-app-mirror](https://github.com/Wangnov/codex-app-mirror) 的独立安装包。该第三方项目声明安装包来自官方，未经修改或重新打包。
 
@@ -46,7 +50,9 @@ Add-AppxPackage -Path "C:\Users\你的用户名\Downloads\实际下载的文件�
 
 从开始菜单打开应用，能正常显示界面即安装成功。
 
-## 下一步
+<span id="下一步" className="legacy-anchor" />
+
+## 下一步 {#next-steps}
 
 前往 [Codex/Claude 模型配置](<../CC Switch安装与使用.md>)，配置模型服务并验证连接。
 

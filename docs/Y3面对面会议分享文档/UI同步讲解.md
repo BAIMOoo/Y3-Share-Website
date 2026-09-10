@@ -1,4 +1,5 @@
 ---
+slug: /talks/ui-sync
 title: UI同步讲解
 showLastUpdateAuthor: true
 sidebar_position: 2
@@ -6,7 +7,9 @@ sidebar_position: 2
 建议先阅读官方文档[多人联机同步机制-开发者学院-Y3编辑器官网](https://163.com/learn/project/d/15?Aid=24)
 
 讲解直播视频： https://163.com/learn/project/d/31?Aid=72
-### 界面逻辑中的帧同步+事件同步
+<span id="界面逻辑中的帧同步事件同步" className="legacy-anchor" />
+
+### 界面逻辑中的帧同步+事件同步 {#frame-and-event-sync}
 - 由于界面的特殊性，Y3在处理界面同步逻辑时，额外采用了事件同步的机制，会同步玩家的具体UI操作事件
 - Y3在处理界面逻辑时，为了节省性能开销，将界面数据分为 渲染数据 和 逻辑数据
     - 渲染数据是针对本地玩家用于界面绘制用的数据，本地客户端只会针对当前用户维护一份，不会维护其他玩家的数据

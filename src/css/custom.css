@@ -37,3 +37,10 @@
 .y3-ai-table table {
   min-width: 640px;
 }
+
+/* Keep old section links aligned below the sticky navbar without adding space. */
+.legacy-anchor {
+  display: block;
+  height: 0;
+  scroll-margin-top: calc(var(--ifm-navbar-height) + 1rem);
+}

@@ -1,4 +1,5 @@
 ---
+slug: /ai/y3maker-directory/templates
 title: templates：功能模板
 sidebar_position: 5
 showLastUpdateAuthor: true
@@ -8,7 +9,9 @@ showLastUpdateAuthor: true
 
 `templates/` 保存 Lua 工具、UI 模块和业务系统。顶层 `ReadMe.md` 是索引，模板内的 `ReadMe.md` 说明接入方法。
 
-## 先看模板等级
+<span id="先看模板等级" className="legacy-anchor" />
+
+## 先看模板等级 {#template-levels}
 
 目录前缀与说明书中的等级表示复用门槛：
 
@@ -21,7 +24,9 @@ showLastUpdateAuthor: true
 
 验证情况另看状态与测试记录。
 
-## 模板说明书里哪些字段最重要
+<span id="模板说明书里哪些字段最重要" className="legacy-anchor" />
+
+## 模板说明书里哪些字段最重要 {#key-fields}
 
 | 字段 | 阅读时要确认什么 |
 | --- | --- |
@@ -36,11 +41,15 @@ showLastUpdateAuthor: true
 
 `draft` 可能通过部分测试，`validated` 也可能只做过结构测试，需按测试范围补充当前工程的集成验证。
 
-## 全部模板
+<span id="全部模板" className="legacy-anchor" />
+
+## 全部模板 {#all-templates}
 
 以下按本机 `y3-maker-config/templates/` 的实际目录及各模板 `ReadMe.md` 整理，共 **36 个：A 级 17 个、B 级 12 个、C 级 7 个**，暂无 D 级。不同版本可能增减；每项的完整参数、接口和资源清单见 `.y3maker/templates/模板目录名/ReadMe.md`。
 
-### A 级：通用工具与组件（17 个）
+<span id="a-级通用工具与组件17-个" className="legacy-anchor" />
+
+### A 级：通用工具与组件（17 个） {#level-a}
 
 | 模板目录 | 功能与适用场景 | 接入要点 |
 | --- | --- | --- |
@@ -62,7 +71,9 @@ showLastUpdateAuthor: true
 | `a-ui-pool` | **UI 对象池**：复用列表项、浮动文本、卡牌槽或头顶 UI | 注入组件类、挂载节点及实例化函数 |
 | `difficulty-select` | **难度选择**：选择玩法模式或难度后进入游戏，支持单／多人大厅 | 说明书标为 A 级；导入 `difficulty-select.upui`，按工程适配 UI 路径和启动流程 |
 
-### B 级：业务与 UI 基础模块（12 个）
+<span id="b-级业务与-ui-基础模块12-个" className="legacy-anchor" />
+
+### B 级：业务与 UI 基础模块（12 个） {#level-b}
 
 | 模板目录 | 功能与适用场景 | 接入要点 |
 | --- | --- | --- |
@@ -79,7 +90,9 @@ showLastUpdateAuthor: true
 | `b-shield-stack` | **护盾栈**：管理装备、技能、Buff 等多来源护盾，按优先级吸收伤害 | 提供链表与属性读写接口，可接 Buff 绑定、移除及破盾回调 |
 | `b-tag-counter` | **标签计数器**：按数量触发羁绊、套装、种族或卡牌流派的阶梯效果 | 配置标签定义及升级／降级／计数变化回调；UI 使用同名 `.upui` 元件 |
 
-### C 级：需适配项目的业务系统（7 个）
+<span id="c-级需适配项目的业务系统7-个" className="legacy-anchor" />
+
+### C 级：需适配项目的业务系统（7 个） {#level-c}
 
 Adapter 是一组由当前工程实现的函数，用来连接模板与实际数据、UI 或游戏行为。
 
@@ -95,7 +108,9 @@ Adapter 是一组由当前工程实现的函数，用来连接模板与实际数
 
 以上介绍功能与依赖，不代表已在当前工程验证。索引与单项说明的状态可能不同，接入前应核对单项说明、源码和实际测试结果。
 
-## 建议的复用顺序
+<span id="建议的复用顺序" className="legacy-anchor" />
+
+## 建议的复用顺序 {#reuse-order}
 
 1. 从顶层索引选模板，阅读其等级、依赖、输入输出与测试范围。
 2. 对照现有模块，确定复用范围与待实现接口。

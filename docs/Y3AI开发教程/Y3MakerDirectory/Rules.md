@@ -1,4 +1,5 @@
 ---
+slug: /ai/y3maker-directory/rules
 title: rules：开发规则
 sidebar_position: 2
 showLastUpdateAuthor: true
@@ -8,7 +9,9 @@ showLastUpdateAuthor: true
 
 `rules/` 保存 API、编辑器操作、UI、测试与记录维护的工作约定。
 
-## .mdc 文件怎么看
+<span id="mdc-文件怎么看" className="legacy-anchor" />
+
+## .mdc 文件怎么看 {#mdc-files}
 
 `.mdc` 是文本文件，部分带有 YAML 元信息：
 
@@ -21,11 +24,15 @@ alwaysApply: true
 
 `description` 说明用途，`alwaysApply` 表达常驻加载意图，正文规定具体要求。值为 `false` 时需查启用条件；值为 `true` 也需确认 Agent 实际加载。
 
-## rules.mdc：核心索引
+<span id="rulesmdc核心索引" className="legacy-anchor" />
+
+## rules.mdc：核心索引 {#rule-index}
 
 先读 `rules.mdc` 中的基础约定、环境检查和主题索引，再查当前任务的规则。旧工程需核对环境标记、Lua 库和配置路径是否有效。
 
-## API、MCP 与 UI 规则
+<span id="apimcp-与-ui-规则" className="legacy-anchor" />
+
+## API、MCP 与 UI 规则 {#api-mcp-ui}
 
 | 文件 | 用途 |
 | --- | --- |
@@ -35,7 +42,9 @@ alwaysApply: true
 
 外部修改 UI 后，需让编辑器读取新内容再保存。具体工具与行为见[Y3 MCP 工具介绍](../Tools.md)及客户端说明；旧规则中的等待时间、工具名或路径不一致时，先核实版本与行为，再修正文档。
 
-## 测试与文档一致性规则
+<span id="测试与文档一致性规则" className="legacy-anchor" />
+
+## 测试与文档一致性规则 {#testing-and-docs}
 
 `auto-test.mdc` 仅在明确执行自动化测试时适用，规定环境与连接检查、失败处理等执行纪律。
 
@@ -50,11 +59,15 @@ alwaysApply: true
 
 修改任一产物时，同步检查其余内容；目录和命名由根目录 `spec-config.json` 配置。
 
-## memory.mdc：约定记录方式
+<span id="memorymdc约定记录方式" className="legacy-anchor" />
+
+## memory.mdc：约定记录方式 {#memory-rules}
 
 `memory.mdc` 规定会话总结、决策和 Lua 问题的记录频率、格式与归档方式；实际记录写入 [memory 目录](./Memory.md)。
 
-## 怎样维护项目规则
+<span id="怎样维护项目规则" className="legacy-anchor" />
+
+## 怎样维护项目规则 {#maintaining-rules}
 
 将命名、接口查证、UI 接入和验证等稳定约定写入对应主题，注明适用条件与动作，避免重复；临时进度放入记忆或执行案。
 

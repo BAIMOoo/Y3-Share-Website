@@ -1,4 +1,5 @@
 ---
+slug: /ai/y3maker-directory/knowledge
 title: knowledge：知识库文档
 sidebar_position: 1
 showLastUpdateAuthor: true
@@ -8,7 +9,9 @@ showLastUpdateAuthor: true
 
 `knowledge/` 保存 Y3 功能说明、字段规范和工程案例，按系统查阅。
 
-## 两个阅读入口
+<span id="两个阅读入口" className="legacy-anchor" />
+
+## 两个阅读入口 {#reading-entry-points}
 
 | 文件 | 用途 |
 | --- | --- |
@@ -17,7 +20,9 @@ showLastUpdateAuthor: true
 
 地图名、模块和路径以当前工程为准；索引未收录的文件可直接在目录中查找。
 
-## 核心系统：理解游戏基础机制
+<span id="核心系统理解游戏基础机制" className="legacy-anchor" />
+
+## 核心系统：理解游戏基础机制 {#core-systems}
 
 以下文件位于 `knowledge/核心系统/`。
 
@@ -35,7 +40,9 @@ showLastUpdateAuthor: true
 | `10-玩家操作.md` | 键鼠交互、快捷键与输入事件 |
 | `11-地图逻辑资源.md` | 点、路径、区域的保存与引用，静态与动态资源差异 |
 
-## 物编系统：按对象类型查字段
+<span id="物编系统按对象类型查字段" className="legacy-anchor" />
+
+## 物编系统：按对象类型查字段 {#object-editor}
 
 以下文件位于 `knowledge/物编系统/`。先读 `01-概述.md` 了解目录和通用字段，再读目标对象的文档。
 
@@ -52,7 +59,9 @@ showLastUpdateAuthor: true
 
 例如，减速飞弹需查技能、投射物和魔法效果，生成与修改流程见 `y3-obj-edit` 技能。
 
-## UI 系统：从数据结构到 Lua 接入
+<span id="ui-系统从数据结构到-lua-接入" className="legacy-anchor" />
+
+## UI 系统：从数据结构到 Lua 接入 {#ui-system}
 
 以下文件位于 `knowledge/UI系统/`。
 
@@ -69,12 +78,16 @@ showLastUpdateAuthor: true
 
 首次制作面板，可按“字段规范 → 所用组件 → 适配规则 → 接入实战手册”阅读。动态生成列表时补读自定义 UI 元件；做单位头顶显示时补读场景 UI。
 
-## 其他专题与实战参考
+<span id="其他专题与实战参考" className="legacy-anchor" />
+
+## 其他专题与实战参考 {#topics}
 
 `其他/01-镜头动画.md` 介绍镜头动画。`实战工程参考/` 中的 `塔防工程实战知识库.md` 和 `存档系统架构设计指南.md` 提供工程经验与架构参考。
 
 案例中的物编 ID、路径、数值和模块名需适配当前工程，验证结果也需在当前工程复核。
 
-## 与技能参考资料的区别
+<span id="与技能参考资料的区别" className="legacy-anchor" />
+
+## 与技能参考资料的区别 {#skill-references}
 
 知识库按系统分类，技能的 `references/` 按任务提供速查。Lua API 还需查 `skills/y3-lua-pipeline/references/`，并对照当前 Lua 库核实。

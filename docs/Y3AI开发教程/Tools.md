@@ -1,4 +1,5 @@
 ---
+slug: /ai/mcp-tools
 title: Y3 MCP 工具介绍
 sidebar_position: 7
 showLastUpdateAuthor: true
@@ -12,14 +13,16 @@ showLastUpdateAuthor: true
 
 默认配置位于 `.y3maker/mcp_settings.json`；外部客户端通过[迁移 skill 接入](./03-Agent部署教程/MCP接入.md)。VS Code、Y3 编辑器和 Agent 应打开同一工程；多开时核对端口归属。
 
-## Y3 Helper MCP（`y3-helper`）
+## Y3 Helper MCP（`y3-helper`） {#y3-helper-mcpy3-helper}
 
 由 VS Code 的 Y3 开发助手提供，用于游戏控制、调试和 Lua 诊断。
 
 - **连接条件：** VS Code 已启用 Y3 开发助手，并打开、初始化工程。服务未自动启动时，选择助手的 **功能 > MCP Server > 启动 MCP Server**。
 - **默认地址：** `http://127.0.0.1:8766/mcp`。
 
-### 游戏控制
+<span id="游戏控制" className="legacy-anchor" />
+
+### 游戏控制 {#game-control}
 
 <div className="y3-ai-table">
 
@@ -32,7 +35,9 @@ showLastUpdateAuthor: true
 
 </div>
 
-### 调试与检查
+<span id="调试与检查" className="legacy-anchor" />
+
+### 调试与检查 {#debugging}
 
 <div className="y3-ai-table">
 
@@ -46,18 +51,22 @@ showLastUpdateAuthor: true
 
 </div>
 
-### 游戏运行时连接
+<span id="游戏运行时连接" className="legacy-anchor" />
+
+### 游戏运行时连接 {#runtime-connection}
 
 `y3runtime` 在游戏启动后可用，默认地址为 `http://127.0.0.1:8767/mcp`。助手启动游戏后会尝试重连；仍离线时，手动刷新或重连，再检查工具列表。
 
-## Y3 Editor MCP（`y3editor`）
+## Y3 Editor MCP（`y3editor`） {#y3-editor-mcpy3editor}
 
 由 Y3 编辑器提供，用于地图与地形编辑、UI、物编、资源和触发器操作。
 
 - **连接条件：** Y3 编辑器已运行并打开目标工程。
 - **默认地址：** `http://127.0.0.1:8765/mcp`。
 
-### 编辑器操作
+<span id="编辑器操作" className="legacy-anchor" />
+
+### 编辑器操作 {#editor-operations}
 
 <div className="y3-ai-table">
 
@@ -73,7 +82,9 @@ showLastUpdateAuthor: true
 
 </div>
 
-### UI 查询、导入与截图
+<span id="ui-查询导入与截图" className="legacy-anchor" />
+
+### UI 查询、导入与截图 {#ui-tools}
 
 <div className="y3-ai-table">
 
@@ -89,7 +100,9 @@ showLastUpdateAuthor: true
 
 `screenshot_ui` 会切换 UI 预览层、将缩放设为 33%，使用前先保存。实际层级和交互需在游戏中检查。
 
-### 官方资源工具
+<span id="官方资源工具" className="legacy-anchor" />
+
+### 官方资源工具 {#official-assets}
 
 <div className="y3-ai-table">
 
@@ -107,7 +120,9 @@ showLastUpdateAuthor: true
 
 </div>
 
-### 本地资源导入
+<span id="本地资源导入" className="legacy-anchor" />
+
+### 本地资源导入 {#import-assets}
 
 <div className="y3-ai-table">
 
@@ -119,7 +134,9 @@ showLastUpdateAuthor: true
 
 </div>
 
-### 物编查询与导入导出
+<span id="物编查询与导入导出" className="legacy-anchor" />
+
+### 物编查询与导入导出 {#object-editor}
 
 以下五个自定义数据查询工具均支持：无参读取全部，或指定物编、字段查询。
 
@@ -138,7 +155,9 @@ showLastUpdateAuthor: true
 
 </div>
 
-### 地图尺寸与地形
+<span id="地图尺寸与地形" className="legacy-anchor" />
+
+### 地图尺寸与地形 {#map-and-terrain}
 
 `_block` 工具批量处理格子。地形模式和尺寸可先用 `get_map_info` 查询，修改后用 `terrain_get_block` 核对。
 
@@ -163,7 +182,9 @@ showLastUpdateAuthor: true
 
 </div>
 
-### 地表纹理与植被
+<span id="地表纹理与植被" className="legacy-anchor" />
+
+### 地表纹理与植被 {#textures-and-vegetation}
 
 <div className="y3-ai-table">
 
@@ -178,7 +199,9 @@ showLastUpdateAuthor: true
 
 </div>
 
-### 场景实体、点、区域与路径
+<span id="场景实体点区域与路径" className="legacy-anchor" />
+
+### 场景实体、点、区域与路径 {#scene-objects}
 
 点、区域和路径工具中的二维坐标 `[x, y]` 对应引擎的 X、Z 轴。
 
@@ -195,7 +218,9 @@ showLastUpdateAuthor: true
 
 </div>
 
-### 触发器
+<span id="触发器" className="legacy-anchor" />
+
+### 触发器 {#triggers}
 
 <div className="y3-ai-table">
 
@@ -205,7 +230,9 @@ showLastUpdateAuthor: true
 
 </div>
 
-### 刷新与保存
+<span id="刷新与保存" className="legacy-anchor" />
+
+### 刷新与保存 {#refresh-and-save}
 
 外部修改 UI 或物编 JSON 时，依次执行：
 
@@ -215,7 +242,9 @@ showLastUpdateAuthor: true
 
 异步导入也需等工具报告完成后再保存，避免编辑器旧内容覆盖文件修改。
 
-### 旧工具名称迁移
+<span id="旧工具名称迁移" className="legacy-anchor" />
+
+### 旧工具名称迁移 {#legacy-tool-names}
 
 当前核对的服务未提供以下旧名称：
 

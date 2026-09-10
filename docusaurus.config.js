@@ -17,6 +17,7 @@ const config = {
     mermaid: true,
   },
   themes: ['@docusaurus/theme-mermaid'],
+  plugins: ['./plugins/doc-url-compat'],
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {

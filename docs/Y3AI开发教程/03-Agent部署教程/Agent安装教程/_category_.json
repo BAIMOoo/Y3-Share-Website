@@ -5,6 +5,7 @@
   "collapsed": true,
   "link": {
     "type": "generated-index",
-    "description": "按推荐优先级选择一种客户端完成安装，再按“Codex/Claude 模型配置”完成模型服务配置。"
+    "description": "按推荐优先级选择一种客户端完成安装，再按“Codex/Claude 模型配置”完成模型服务配置。",
+    "slug": "/ai/agent-installation"
   }
 }

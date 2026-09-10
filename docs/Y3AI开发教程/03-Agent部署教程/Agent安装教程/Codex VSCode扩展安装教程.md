@@ -1,6 +1,6 @@
 ---
 title: Codex VS Code 扩展
-slug: /Y3AI开发教程/Agent部署教程/Codex VSCode扩展安装教程
+slug: /ai/codex-vscode
 sidebar_position: 2
 pagination_next: Y3AI开发教程/Agent部署教程/CC Switch安装与使用
 showLastUpdateAuthor: true
@@ -8,7 +8,9 @@ showLastUpdateAuthor: true
 
 在 VS Code 侧栏中使用 Codex。Y3 项目的 Git、Python 和 Node.js 环境见[准备 Y3 项目](../../EnvironmentSetup.md)。
 
-## 安装与打开
+<span id="安装与打开" className="legacy-anchor" />
+
+## 安装与打开 {#installation}
 
 [![VS Code 下载页：① Windows，② User Installer 的 x64 或 Arm64](../img/vscode-download.png)](../img/vscode-download.png "点击查看原图")
 
@@ -22,7 +24,9 @@ showLastUpdateAuthor: true
 
 能打开 Codex 侧栏即安装成功。
 
-## 下一步
+<span id="下一步" className="legacy-anchor" />
+
+## 下一步 {#next-steps}
 
 前往 [Codex/Claude 模型配置](<../CC Switch安装与使用.md>)，配置模型服务并验证连接。
 
