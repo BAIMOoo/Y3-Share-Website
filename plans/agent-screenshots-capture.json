@@ -1,0 +1,220 @@
+{
+  "node-download": {
+    "url": "https://nodejs.org/en/download",
+    "dpr": 2,
+    "height": 860,
+    "width": 1905,
+    "marks": [
+      [
+        1,
+        [
+          527.609375,
+          159,
+          681.609375,
+          207
+        ]
+      ],
+      [
+        2,
+        [
+          648,
+          647.96875,
+          994.96875,
+          695.96875
+        ]
+      ],
+      [
+        3,
+        [
+          419.5,
+          701.96875,
+          653.5,
+          749.96875
+        ]
+      ]
+    ]
+  },
+  "vscode-download": {
+    "url": "https://code.visualstudio.com/download?_exp_download=fb315fc982",
+    "dpr": 2,
+    "height": 860,
+    "width": 1905,
+    "marks": [
+      [
+        1,
+        [
+          525.640625,
+          441.046875,
+          695.390625,
+          523.390625
+        ]
+      ],
+      [
+        2,
+        [
+          620.25,
+          534.390625,
+          704.734375,
+          561.53125
+        ]
+      ]
+    ]
+  },
+  "codex-official-download": {
+    "url": "https://learn.chatgpt.com/docs/windows/windows-app",
+    "dpr": 2,
+    "height": 860,
+    "width": 1920,
+    "marks": [
+      [
+        1,
+        [
+          607.875,
+          769.359375,
+          777.421875,
+          798.359375
+        ]
+      ]
+    ]
+  },
+  "claude-install-page": {
+    "url": "https://code.claude.com/docs/en/setup#install-claude-code",
+    "dpr": 2,
+    "height": 860,
+    "width": 1905,
+    "x": 0,
+    "y": 881,
+    "marks": [
+      [
+        1,
+        [
+          574.6875,
+          376.28125,
+          789.78125,
+          432.28125
+        ]
+      ],
+      [
+        2,
+        [
+          591.6875,
+          649.28125,
+          932.578125,
+          675.28125
+        ]
+      ]
+    ]
+  },
+  "codex-mirror-assets": {
+    "url": "https://github.com/Wangnov/codex-app-mirror/releases/tag/codex-app-26.903.61454",
+    "dpr": 2,
+    "height": 860,
+    "width": 1905,
+    "x": 0,
+    "y": 3766,
+    "marks": [
+      [
+        1,
+        [
+          397.5,
+          423.78125,
+          767.296875,
+          451.28125
+        ]
+      ],
+      [
+        2,
+        [
+          397.5,
+          379.78125,
+          785.171875,
+          407.28125
+        ]
+      ]
+    ]
+  },
+  "github-assets-toggle": {
+    "url": "https://github.com/Wangnov/codex-app-mirror/releases/tag/codex-app-26.903.61454",
+    "dpr": 2,
+    "height": 860,
+    "width": 1905,
+    "x": 0,
+    "y": 2757,
+    "marks": [
+      [
+        1,
+        [
+          356.5,
+          712.53125,
+          480,
+          752.53125
+        ]
+      ]
+    ]
+  },
+  "codex-mirror-links": {
+    "url": "https://github.com/Wangnov/codex-app-mirror/releases/tag/codex-app-26.903.61454",
+    "dpr": 2,
+    "height": 860,
+    "width": 1905,
+    "x": 0,
+    "y": 2435,
+    "marks": [
+      [
+        1,
+        [
+          490.359375,
+          379.96875,
+          855.609375,
+          410.96875
+        ]
+      ],
+      [
+        2,
+        [
+          517.265625,
+          407.96875,
+          902.65625,
+          438.96875
+        ]
+      ]
+    ]
+  },
+  "cc-switch-assets": {
+    "url": "https://github.com/farion1231/cc-switch/releases/tag/v3.20.2",
+    "dpr": 1,
+    "height": 860,
+    "width": 1905,
+    "x": 0,
+    "y": 11273,
+    "marks": [
+      [
+        1,
+        [
+          397.5,
+          496.40625,
+          611.9375,
+          523.90625
+        ]
+      ],
+      [
+        2,
+        [
+          397.5,
+          452.40625,
+          667.609375,
+          479.90625
+        ]
+      ],
+      [
+        3,
+        [
+          397.5,
+          364.40625,
+          658.328125,
+          391.90625
+        ]
+      ]
+    ]
+  }
+}

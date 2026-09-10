@@ -1,0 +1,1221 @@
+[
+  {
+    "name": "get_official_editor_model",
+    "description": "根据 ID 查询官方模型资源的详细信息，包括ID、类型、名称和标签。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "ID": {
+          "type": "integer",
+          "description": "模型唯一标识符，例如 '1001'"
+        }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "get_official_editor_sound",
+    "description": "根据 ID 查询官方声音资源的详细信息，包括ID、类型、名称和标签。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "ID": {
+          "type": "integer",
+          "description": "声音唯一标识符，例如 '1001'"
+        }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "get_official_editor_effect",
+    "description": "根据 ID 查询官方特效资源的详细信息，包括ID、类型、名称和标签。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "ID": {
+          "type": "integer",
+          "description": "特效唯一标识符，例如 '1001'"
+        }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "get_official_editor_icon",
+    "description": "根据 ID 查询官方图标资源的详细信息，包括ID、类型、名称和标签。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "ID": {
+          "type": "integer",
+          "description": "图标唯一标识符，例如 '1001'"
+        }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "get_official_resource_associate_match",
+    "description": "根据 ID 查询官方资源的素材联想和配套资源。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "ID": {
+          "type": "integer",
+          "description": "资源唯一标识符，例如 '1001'"
+        },
+        "resource_type": {
+          "type": "string",
+          "enum": [
+            "模型",
+            "声音",
+            "特效",
+            "图标"
+          ],
+          "description": "资源类型"
+        }
+      },
+      "required": [
+        "ID",
+        "资源类型"
+      ]
+    }
+  },
+  {
+    "name": "hotfix_ui_editor",
+    "description": "热更ui编辑器",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    }
+  },
+  {
+    "name": "hotfix_object_editor",
+    "description": "热更物编",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    }
+  },
+  {
+    "name": "save_editor",
+    "description": "保存",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    }
+  },
+  {
+    "name": "get_editor_log",
+    "description": "获取编辑器log",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    }
+  },
+  {
+    "name": "modify_editor_config",
+    "description": "修改编辑器配置。目前支持的配置类型：close_auto_save（关闭编辑器自动保存）。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "config_type": {
+          "type": "string",
+          "enum": [
+            "close_auto_save"
+          ],
+          "description": "配置类型。close_auto_save: 关闭编辑器自动保存"
+        }
+      },
+      "required": [
+        "config_type"
+      ]
+    }
+  },
+  {
+    "name": "resize_terrain",
+    "description": "修改当前地形的尺寸。可以扩大或缩小地形，支持指定扩展/收缩方向。合法尺寸为 16 的倍数（16, 32, 48, ..., 480）。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "width": {
+          "type": "integer",
+          "description": "新的地形宽度，必须是 16 的倍数（16-480）"
+        },
+        "height": {
+          "type": "integer",
+          "description": "新的地形高度，必须是 16 的倍数（16-480）"
+        },
+        "direction": {
+          "type": "string",
+          "enum": [
+            "center",
+            "left",
+            "right",
+            "top",
+            "bottom"
+          ],
+          "description": "扩展/收缩方向。center: 居中扩展（默认）, left: 向左扩展, right: 向右扩展, top: 向上扩展, bottom: 向下扩展",
+          "default": "center"
+        }
+      },
+      "required": [
+        "width",
+        "height"
+      ]
+    }
+  },
+  {
+    "name": "restart_editor",
+    "description": "重启编辑器并打开当前地图。用于在需要重新加载编辑器的情况下使用。重启会直接结束当前进程，因此默认会先保存当前地图，避免未保存的修改丢失。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "save_before_restart": {
+          "type": "boolean",
+          "description": "重启前是否自动保存当前地图。默认 true。",
+          "default": true
+        }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "download_editor_model_resource",
+    "description": "下载模型资源",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "editor_model_id_list": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "model_id_list"
+      ]
+    }
+  },
+  {
+    "name": "download_editor_effect_resource",
+    "description": "下载特效资源",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "editor_effect_id_list": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "effect_id_list"
+      ]
+    }
+  },
+  {
+    "name": "download_editor_icon_resource",
+    "description": "下载图标资源",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "editor_icon_id_list": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "icon_id_list"
+      ]
+    }
+  },
+  {
+    "name": "download_editor_sound_resource",
+    "description": "下载声音资源",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "editor_sound_id_list": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "sound_id_list"
+      ]
+    }
+  },
+  {
+    "name": "import_mdx",
+    "description": "导入mdx模型，需要输入mdx文件路径和war3文件夹路径",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "mdx_path": {
+          "type": "string",
+          "description": "mdx的文件路径，例如 'e:\\war3\\mdx\\test.mdx'"
+        },
+        "war3_path": {
+          "type": "string",
+          "description": "war3基础资源仓库路径"
+        }
+      },
+      "required": [
+        "mdx_path",
+        "war3_path"
+      ]
+    }
+  },
+  {
+    "name": "import_editor_icon",
+    "description": "导入本地图片为编辑器图标资源。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "image_path": {
+          "type": "string",
+          "description": "图片文件绝对路径，例如 'D:/assets/icon.png'。支持 png、jpg、tga、bmp、dds、webp。"
+        }
+      },
+      "required": [
+        "image_path"
+      ]
+    }
+  },
+  {
+    "name": "import_editor_fbx_model",
+    "description": "导入本地 FBX 文件为编辑器模型资源。支持通过 resource_map_json 批量导入贴图和动画。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "fbx_path": {
+          "type": "string",
+          "description": "FBX 文件绝对路径，例如 'D:/assets/model.fbx'。"
+        },
+        "resource_map_json": {
+          "type": "string",
+          "description": "可选。资源映射 JSON 文件绝对路径。提供贴图(meshes[].textures)和动画(animations)配置，导入后可自动绑定到模型。"
+        }
+      },
+      "required": [
+        "fbx_path"
+      ]
+    }
+  },
+  {
+    "name": "get_editor_unit_custom_data",
+    "description": "获取自定义单位物编，无参返回所有自定义单位物编，否则返回指定物编或指定字段",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id_list": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "key_list": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "get_ability_all_custom_data",
+    "description": "获取自定义技能物编，无参返回所有自定义技能物编，否则返回指定物编或指定字段",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id_list": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "key_list": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "get_editor_item_custom_data",
+    "description": "获取自定义物品物编，无参返回所有自定义物品物编，否则返回指定物编或指定字段",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id_list": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "key_list": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "get_modifier_all_custom_data",
+    "description": "获取自定义魔法效果物编，无参返回所有自定义魔法效果物编，否则返回指定物编或指定字段",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id_list": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "key_list": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "get_projectile_all_custom_data",
+    "description": "获取自定义投射物物编，无参返回所有自定义投射物物编，否则返回指定物编或指定字段",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id_list": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "key_list": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "get_object_editor_list",
+    "description": "获取当前地图的物编列表，支持按类型筛选。返回物编 ID、名称、所在文件夹等信息。用于在导出前查看可用的物编资源。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "object_types": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "editor_unit",
+              "ability_all",
+              "modifier_all",
+              "projectile_all",
+              "editor_item",
+              "editor_decoration",
+              "editor_destructible",
+              "technology_all",
+              "sound_all",
+              "store_all"
+            ]
+          },
+          "description": "要查询的物编类型列表。不传则返回全部类型。可选值：editor_unit(单位)、ability_all(技能)、modifier_all(魔法效果)、projectile_all(投射物)、editor_item(物品)、editor_decoration(装饰物)、editor_destructible(可破坏物)、technology_all(科技)、sound_all(音效)、store_all(平台道具)"
+        }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "export_object_editor",
+    "description": "导出物编资源为 .zip 压缩包。可选择导出全部或指定的物编内容，支持按类型或具体 ID 筛选。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "output_path": {
+          "type": "string",
+          "description": "导出目录的绝对路径，例如 'D:/exports'"
+        },
+        "object_types": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "editor_unit",
+              "ability_all",
+              "modifier_all",
+              "projectile_all",
+              "editor_item",
+              "editor_decoration",
+              "editor_destructible",
+              "technology_all",
+              "sound_all"
+            ]
+          },
+          "description": "要导出的物编类型列表。不传或为空则导出全部类型（不含 store_all）"
+        },
+        "object_ids": {
+          "type": "object",
+          "description": "按类型指定要导出的物编 ID，格式：{'editor_unit': [10001, 10002], 'ability_all': [20001]}。与 object_types 同时使用时，只导出指定 ID",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "include_dependencies": {
+          "type": "boolean",
+          "description": "是否计算并导出依赖的资源（关联的其他物编、自定义资源等），默认 true",
+          "default": true
+        },
+        "split_sheet": {
+          "type": "boolean",
+          "description": "导出 Excel 时是否按属性分 sheet，默认 true",
+          "default": true
+        },
+        "output_filename": {
+          "type": "string",
+          "description": "输出的 zip 文件名，默认 'editor_export.zip'",
+          "default": "editor_export.zip"
+        }
+      },
+      "required": [
+        "output_path"
+      ]
+    }
+  },
+  {
+    "name": "import_object_editor",
+    "description": "从 .zip 压缩包导入物编资源到当前地图。导入后会自动刷新物编视图并保存编辑器。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "zip_path": {
+          "type": "string",
+          "description": ".zip 文件的绝对路径，例如 'D:/exports/editor_export.zip'"
+        }
+      },
+      "required": [
+        "zip_path"
+      ]
+    }
+  },
+  {
+    "name": "terrain_set_height_block",
+    "description": "设置一批地形格子的悬崖高度（抬高/降低/整平）。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "cells": {
+          "type": "array",
+          "description": "格子列表，每个元素包含 x, z（必填），height（高度偏移，默认2），water_height（默认0），radius（默认1）",
+          "items": {
+            "type": "object"
+          }
+        },
+        "cliff_tex_id": {
+          "type": "integer",
+          "description": "悬崖材质 ID，默认 0。合法值: 0=泥土, 1=冰, 2=石头, 3=岩浆, 8=灰色, 9=沙地, 10=dota2"
+        },
+        "auto_texture": {
+          "type": "boolean",
+          "description": "是否自动纹理，默认 false"
+        },
+        "with_deco": {
+          "type": "boolean",
+          "description": "是否带摆件，默认 false"
+        },
+        "water_type": {
+          "type": "integer",
+          "description": "水体类型，默认 0"
+        },
+        "flatten": {
+          "type": "boolean",
+          "description": "整平模式，默认 false"
+        }
+      },
+      "required": [
+        "cells"
+      ]
+    }
+  },
+  {
+    "name": "terrain_set_deep_water_block",
+    "description": "设置一批格子为深水（不可通行）。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "cells": {
+          "type": "array",
+          "description": "格子列表，每个元素包含 x, z（必填），radius（默认1）。水底高度由引擎根据实际地形自动计算",
+          "items": {
+            "type": "object"
+          }
+        },
+        "cliff_tex_id": {
+          "type": "integer",
+          "description": "悬崖材质 ID，默认 0。合法值: 0=泥土, 1=冰, 2=石头, 3=岩浆, 8=灰色, 9=沙地, 10=dota2"
+        },
+        "water_type": {
+          "type": "integer",
+          "description": "水体类型，默认 0"
+        }
+      },
+      "required": [
+        "cells"
+      ]
+    }
+  },
+  {
+    "name": "terrain_set_shallow_water_block",
+    "description": "设置一批格子为浅水（可通行）。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "cells": {
+          "type": "array",
+          "description": "格子列表，每个元素包含 x, z（必填），radius（默认1）。水底高度由引擎根据实际地形自动计算",
+          "items": {
+            "type": "object"
+          }
+        },
+        "cliff_tex_id": {
+          "type": "integer",
+          "description": "悬崖材质 ID，默认 0。合法值: 0=泥土, 1=冰, 2=石头, 3=岩浆, 8=灰色, 9=沙地, 10=dota2"
+        },
+        "water_type": {
+          "type": "integer",
+          "description": "水体类型，默认 0"
+        }
+      },
+      "required": [
+        "cells"
+      ]
+    }
+  },
+  {
+    "name": "terrain_set_plain_water_block",
+    "description": "设置一批格子为平面水。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "cells": {
+          "type": "array",
+          "description": "格子列表，每个元素包含 x, z（必填），detail_height（水面高度，默认0），radius（默认1）",
+          "items": {
+            "type": "object"
+          }
+        },
+        "water_type": {
+          "type": "integer",
+          "description": "水体类型，默认 0"
+        }
+      },
+      "required": [
+        "cells"
+      ]
+    }
+  },
+  {
+    "name": "terrain_erase_plain_water_block",
+    "description": "擦除一批格子的平面水。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "cells": {
+          "type": "array",
+          "description": "格子列表，每个元素包含 x, z（必填），detail_height（可选，不填则自动读取），radius（默认1）",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "required": [
+        "cells"
+      ]
+    }
+  },
+  {
+    "name": "terrain_set_road_block",
+    "description": "设置一批格子为斜坡/道路。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "cells": {
+          "type": "array",
+          "description": "格子列表，每个元素包含 x, z（必填），y（世界Y坐标，默认0，若为0自动读取真实地面高度）",
+          "items": {
+            "type": "object"
+          }
+        },
+        "cliff_tex_id": {
+          "type": "integer",
+          "description": "悬崖材质 ID，默认 0。mesh_type 自动从查表的 cliff_type 获取"
+        },
+        "auto_texture": {
+          "type": "boolean",
+          "description": "是否自动纹理，默认 false"
+        }
+      },
+      "required": [
+        "cells"
+      ]
+    }
+  },
+  {
+    "name": "terrain_set_crack_block",
+    "description": "设置一批格子为裂缝（地形空洞，不可通行）。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "cells": {
+          "type": "array",
+          "description": "格子列表，每个元素包含 x, z（必填），y（默认0），radius（默认1）",
+          "items": {
+            "type": "object"
+          }
+        },
+        "cliff_tex_id": {
+          "type": "integer",
+          "description": "悬崖材质 ID，默认 0"
+        }
+      },
+      "required": [
+        "cells"
+      ]
+    }
+  },
+  {
+    "name": "terrain_hill_lift_block",
+    "description": "对一批格子执行地形隆起（delta_height>0）或降低（delta_height<0）。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "cells": {
+          "type": "array",
+          "description": "格子列表，每个元素包含 x, z（必填），delta_height（正=隆起，负=降低，默认1），detail_height（默认0），radius（默认1）",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "required": [
+        "cells"
+      ]
+    }
+  },
+  {
+    "name": "terrain_hill_flat_block",
+    "description": "将一批格子地形推平到指定高度。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "cells": {
+          "type": "array",
+          "description": "格子列表，每个元素包含 x, z（必填），detail_height（目标高度，不填则自动读取），radius（默认1）",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "required": [
+        "cells"
+      ]
+    }
+  },
+  {
+    "name": "terrain_hill_smooth_block",
+    "description": "对一批格子执行地形平滑。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "cells": {
+          "type": "array",
+          "description": "格子列表，每个元素包含 x, z（必填），strength（平滑强度，默认1），radius（默认1）",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "required": [
+        "cells"
+      ]
+    }
+  },
+  {
+    "name": "terrain_hill_steep_block",
+    "description": "对一批格子执行地形陡峭化。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "cells": {
+          "type": "array",
+          "description": "格子列表，每个元素包含 x, z（必填），strength（陡峭强度，默认1），radius（默认1）",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "required": [
+        "cells"
+      ]
+    }
+  },
+  {
+    "name": "terrain_cover_draw_block",
+    "description": "对一批格子绘制地面纹理。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "cells": {
+          "type": "array",
+          "description": "格子列表，每个元素包含 x, z（必填），texture_type（纹理类型ID，必填），power（强度，默认1.0），radius（默认1）",
+          "items": {
+            "type": "object"
+          }
+        },
+        "with_foliage": {
+          "type": "boolean",
+          "description": "是否同时生成植被，默认 false"
+        }
+      },
+      "required": [
+        "cells"
+      ]
+    }
+  },
+  {
+    "name": "terrain_get_block",
+    "description": "读取一批格子的当前地形状态（高度、flat、水体、裂缝等），用于误差校验。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "cells": {
+          "type": "array",
+          "description": "格子列表，每个元素包含 x, z（必填）",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "required": [
+        "cells"
+      ]
+    }
+  },
+  {
+    "name": "get_map_info",
+    "description": "获取当前编辑器打开的地图信息，包括项目路径、地图名称、地图路径、点阵尺寸（width/height）和地形模式（terrain_mode: 0=经典, 1=叠加）。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    }
+  },
+  {
+    "name": "terrain_hill_hollow_block",
+    "description": "对一批格子执行地形镂空。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "cells": {
+          "type": "array",
+          "description": "格子列表，每个元素包含 x, z（必填），offset（镂空深度，默认1），radius（默认1）",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "required": [
+        "cells"
+      ]
+    }
+  },
+  {
+    "name": "terrain_draw_texture_block",
+    "description": "对一批格子绘制混合纹理层（支持渐变混合，区别于 terrain_cover_draw_block 的材质层整格替换）。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "cells": {
+          "type": "array",
+          "description": "格子列表，每个元素包含 x, z（必填），texture_type（纹理类型ID，必填），radius（默认1），strength（绘制强度，默认1.0），attenuation（衰减，默认0.5）",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "required": [
+        "cells"
+      ]
+    }
+  },
+  {
+    "name": "terrain_erase_texture_block",
+    "description": "擦除一批格子的混合纹理层。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "cells": {
+          "type": "array",
+          "description": "格子列表，每个元素包含 x, z（必填），texture_type（要擦除的纹理类型ID，必填），radius（默认1），strength（默认1.0），attenuation（默认0.5）",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "required": [
+        "cells"
+      ]
+    }
+  },
+  {
+    "name": "terrain_vegetation_draw_block",
+    "description": "对一批格子绘制植被。注意植被坐标系与地形坐标系不同。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "cells": {
+          "type": "array",
+          "description": "格子列表，每个元素包含 x, z（必填，植被坐标系），vegetation_type（植被类型ID，必填），density（密度，默认100），radius（默认1），use_terrain_color（是否使用地形颜色，默认true）",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "required": [
+        "cells"
+      ]
+    }
+  },
+  {
+    "name": "terrain_vegetation_erase_block",
+    "description": "擦除一批格子的植被。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "cells": {
+          "type": "array",
+          "description": "格子列表，每个元素包含 x, z（必填，植被坐标系），radius（默认1），erase_density（是否擦除密度，默认true），erase_color（是否擦除颜色，默认true）",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "required": [
+        "cells"
+      ]
+    }
+  },
+  {
+    "name": "entity_create_block",
+    "description": "批量创建实体。点，区域，路径除外",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "entities": {
+          "type": "array",
+          "description": "实体列表，每个元素包含 type（实体类型，使用引擎位掩码值，如模型资源 RESOURCE_MODEL=2^24=16777216），pos（世界坐标[x,y,z]，必填），model_id（模型ID），rotation（旋转[rx,ry,rz]），scale（缩放[sx,sy,sz]），stick_to_ground（是否贴地，默认true），relative_height（相对高度，默认0）",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "required": [
+        "entities"
+      ]
+    }
+  },
+  {
+    "name": "entity_delete_block",
+    "description": "批量删除实体。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "entities": {
+          "type": "array",
+          "description": "实体列表，每个元素包含 type（实体类型，必填）和 unit_id（实体ID，必填）",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "required": [
+        "entities"
+      ]
+    }
+  },
+  {
+    "name": "ensure_terrain_textures",
+    "description": "查询当前地图纹理面板并自动添加缺失纹理。传入需要使用的纹理 ID 列表，自动检查面板中是否已存在，缺失的追加到面板（上限 32 个）。返回添加结果、面板满时的失败列表、未下载纹理列表和当前完整面板。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "texture_ids": {
+          "type": "array",
+          "description": "需要确保在面板中的纹理资源 ID 列表",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "texture_ids"
+      ]
+    }
+  },
+  {
+    "name": "screenshot_ui",
+    "description": "切换到指定 UI layer 并截图。自动检测并打开 UI 编辑器（如已关闭）、切换 layer、居中缩放到 33%、等待渲染后截取 UI 画布。截图前需确保 Y3 编辑器窗口可见。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "ui_path": {
+          "type": "string",
+          "description": "UI layer 名称（如 '[HUD]Main'）或 JSON 文件路径"
+        },
+        "delay_ms": {
+          "type": "integer",
+          "description": "截图前等待时间（毫秒），默认 1000",
+          "default": 1000
+        }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "delete_screenshot",
+    "description": "删除指定路径的截图文件（用于清理临时截图）。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "file_path": {
+          "type": "string",
+          "description": "要删除的截图文件路径"
+        }
+      },
+      "required": [
+        "file_path"
+      ]
+    }
+  },
+  {
+    "name": "import_ui",
+    "description": "从 .upui 文件导入 UI 资源（画板、元件、场景UI）到当前地图。导入后会自动刷新视图并保存编辑器。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "upui_path": {
+          "type": "string",
+          "description": ".upui 文件的绝对路径，例如 'D:/exports/my_ui.upui'"
+        }
+      },
+      "required": [
+        "upui_path"
+      ]
+    }
+  },
+  {
+    "name": "export_ui",
+    "description": "导出 UI 资源（画板、元件、场景UI）为 .upui 文件。可选择导出全部或指定的 UI 内容。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "output_path": {
+          "type": "string",
+          "description": "导出目录的绝对路径，例如 'D:/exports'"
+        },
+        "layer_names": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "要导出的画板名称或 UID 列表，例如 ['MainHUD', 'GamePanel']。为空或不传则导出全部自定义画板。"
+        },
+        "prefab_names": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "要导出的元件名称或 UID 列表。为空或不传则导出全部自定义元件。"
+        },
+        "scene_ui_names": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "要导出的场景UI名称或 UID 列表。为空或不传则导出全部。"
+        },
+        "include_dependencies": {
+          "type": "boolean",
+          "description": "是否包含依赖的自定义资源（图标、模型、声音等），默认 true",
+          "default": true
+        },
+        "output_filename": {
+          "type": "string",
+          "description": "输出文件名，默认 'clicli_export.upui'",
+          "default": "clicli_export.upui"
+        }
+      },
+      "required": [
+        "output_path"
+      ]
+    }
+  },
+  {
+    "name": "get_ui_list",
+    "description": "获取当前地图的 UI 列表，包括画板、元件、场景UI。用于在导出前查看可用的 UI 资源。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    }
+  },
+  {
+    "name": "add_point",
+    "description": "在场景中摆放一个点。pos_x 对应引擎 X 轴，pos_y 对应引擎 Z 轴。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "pos_x": {
+          "type": "number",
+          "description": "X 轴坐标"
+        },
+        "pos_y": {
+          "type": "number",
+          "description": "Y 轴坐标（对应引擎 Z 轴）"
+        }
+      },
+      "required": [
+        "pos_x",
+        "pos_y"
+      ]
+    }
+  },
+  {
+    "name": "add_rect_area",
+    "description": "在场景中摆放一个矩形区域，由左上角和右下角两个点确定。坐标中 [x, y] 的 y 对应引擎 Z 轴。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "left_up_pos": {
+          "type": "array",
+          "description": "左上角坐标 [x, y]",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "right_bottom_pos": {
+          "type": "array",
+          "description": "右下角坐标 [x, y]",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      },
+      "required": [
+        "left_up_pos",
+        "right_bottom_pos"
+      ]
+    }
+  },
+  {
+    "name": "add_circle_area",
+    "description": "在场景中摆放一个圆形区域，由圆心和半径确定。center_pos 中 [x, y] 的 y 对应引擎 Z 轴。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "center_pos": {
+          "type": "array",
+          "description": "圆心坐标 [x, y]",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "radius": {
+          "type": "number",
+          "description": "半径"
+        }
+      },
+      "required": [
+        "center_pos",
+        "radius"
+      ]
+    }
+  },
+  {
+    "name": "add_point_path",
+    "description": "在场景中摆放一条路径（由多个有序点组成的折线）。point_pos_list 中每个元素为 [x, y]，y 对应引擎 Z 轴。至少需要 2 个点。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "point_pos_list": {
+          "type": "array",
+          "description": "路径点列表，每个元素为 [x, y]。例: [[0, 0], [100, 0], [100, 100]]",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "minItems": 2
+        }
+      },
+      "required": [
+        "point_pos_list"
+      ]
+    }
+  },
+  {
+    "name": "import_eca",
+    "description": "从指定 JSON 文件路径导入全局触发器（ECA）并热更到运行时。支持覆盖已有触发器或新建触发器。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "trigger_json_path": {
+          "type": "string",
+          "description": "触发器 JSON 文件的绝对路径，路径需包含 global_trigger/trigger/"
+        }
+      },
+      "required": [
+        "trigger_json_path"
+      ]
+    }
+  }
+]

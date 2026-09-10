@@ -1,0 +1,54 @@
+[
+  {
+    "url": "https://kk3.nosdn.127.net/y3docs/guides/Editor/y3ai-1.png",
+    "file": "docs/Y3AI开发教程/Y3_AI_images/y3maker/project-create.png"
+  },
+  {
+    "url": "https://kk3.nosdn.127.net/y3docs/guides/Editor/y3ai-2.png",
+    "file": "docs/Y3AI开发教程/Y3_AI_images/y3maker/project-template.png"
+  },
+  {
+    "url": "https://kk3.nosdn.127.net/y3docs/guides/Editor/y3ai-3.png",
+    "file": "docs/Y3AI开发教程/Y3_AI_images/y3maker/project-location.png"
+  },
+  {
+    "url": "https://kk3.nosdn.127.net/y3docs/guides/Editor/y3ai-4.png",
+    "file": "docs/Y3AI开发教程/Y3_AI_images/y3maker/open-folder.png"
+  },
+  {
+    "url": "https://kk3.nosdn.127.net/y3docs/guides/Editor/y3ai-5.png",
+    "file": "docs/Y3AI开发教程/Y3_AI_images/y3maker/select-map-command.png"
+  },
+  {
+    "url": "https://kk3.nosdn.127.net/y3docs/guides/Editor/y3ai-6.png",
+    "file": "docs/Y3AI开发教程/Y3_AI_images/y3maker/select-project-file.png"
+  },
+  {
+    "url": "https://kk3.nosdn.127.net/y3docs/guides/FunctionManual/AIGC/y3ai-6-1.png",
+    "file": "docs/Y3AI开发教程/Y3_AI_images/y3maker/open-y3maker-legacy.png"
+  },
+  {
+    "url": "https://kk3.nosdn.127.net/y3docs/guides/FunctionManual/AIGC/y3ai-9.png",
+    "file": "docs/Y3AI开发教程/Y3_AI_images/y3maker/extension-settings-legacy.png"
+  },
+  {
+    "url": "https://kk3.nosdn.127.net/y3docs/guides/FunctionManual/AIGC/y3ai-10.png",
+    "file": "docs/Y3AI开发教程/Y3_AI_images/y3maker/settings-menu-legacy.png"
+  },
+  {
+    "url": "https://kk3.nosdn.127.net/y3docs/guides/Editor/.y3maker文件夹.png",
+    "file": "docs/Y3AI开发教程/Y3_AI_images/y3maker/y3maker-folder.png"
+  },
+  {
+    "url": "https://kk3.nosdn.127.net/y3docs/guides/Editor/rules正确加载.png",
+    "file": "docs/Y3AI开发教程/Y3_AI_images/y3maker/rules-loaded.png"
+  },
+  {
+    "url": "https://kk3.nosdn.127.net/y3docs/guides/Editor/skillsMCP正确加载.png",
+    "file": "docs/Y3AI开发教程/Y3_AI_images/y3maker/skills-mcp-loaded.png"
+  },
+  {
+    "url": "https://kk3.nosdn.127.net/y3docs/DownloadY3Assistant4.png",
+    "file": "docs/Y3AI开发教程/Y3_AI_images/y3maker/helper-initialize.png"
+  }
+]
