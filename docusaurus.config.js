@@ -13,6 +13,10 @@ const config = {
   title: 'Y3-Share',
   tagline: 'BAIM的个人网站，分享一些关于y3编辑器的小知识',
   favicon: 'img/favicon.ico',
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {

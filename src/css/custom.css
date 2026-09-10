@@ -28,3 +28,12 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+.y3-ai-table {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.y3-ai-table table {
+  min-width: 640px;
+}
