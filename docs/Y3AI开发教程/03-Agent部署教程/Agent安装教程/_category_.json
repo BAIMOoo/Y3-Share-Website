@@ -1,0 +1,10 @@
+{
+  "label": "Agent 安装教程",
+  "position": 0,
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "按推荐优先级选择一种客户端完成安装，再按“Codex/Claude 模型配置”完成模型服务配置。"
+  }
+}
